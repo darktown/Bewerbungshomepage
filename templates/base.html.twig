@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       {% include "/header/index.html.twig" %} 
+    </head>
+    <body>
+        {% if impressum is defined %} 
+        {% include "/nav_bar_imprint/index.html.twig" %}
+            {% else %}
+        {% include "/nav_bar/index.html.twig" %}
+        {% endif %}
+        {% block body %}
+        
+        {% endblock %}
+        {% include "/footer/index.html.twig" %}
+    </body>
+</html>

@@ -1,0 +1,8 @@
+{% block body %}
+
+<div class="example-wrapper">
+  {% for prg in programm %}
+  <img src="images/prg/{{ prg.image }}" alt="{{ prg.name }}" />
+  {% endfor %}
+</div>
+{% endblock %}

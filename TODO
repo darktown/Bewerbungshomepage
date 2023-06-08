@@ -1,0 +1,20 @@
+
+Todo:
+  ☐ Projekte page anlegen @started(23-06-08 21:10)
+  ✔ Controller anlegen @started(23-06-08 21:11) @done(23-06-08 21:11) @lasted(12s)
+  ☐ Entity anlegen
+    ☐ datenbankeintrag über migration anlegen
+      - Projektname -> string
+      - beschreibung -> Text
+      - Link -> string
+      - image -> text
+  ☐ crud im EasyAdmin anlegen
+  ☐ Einbinden auf den Onepager
+    ☐ Titel des Projektes und Vorschaubild auf der seite anzeigen lassen
+  ☐ Projekte als Hover laden mit Link zum Github
+    ☐ Inforamtionen zum Projekt bereitstellen
+      ☐ Name zum Projekt
+      ☐ Sprache des Projektes
+      ☐ Wofür ist es gedacht
+      ☐ Link zum Projekt bzw Github repository
+  

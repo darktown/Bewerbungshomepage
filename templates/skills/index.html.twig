@@ -1,0 +1,53 @@
+{% block body %}
+<!-- Details -->
+<div id="skills" class="split">
+  <div class="area-1"></div>
+  <!-- end of area-1 on same line and no space between comments to eliminate margin white space -->
+  <div class="area-2 bg-gray">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <!-- Text Container -->
+          <div class="text-container">
+            <h2>Why Work With Me</h2>
+
+            <div class="container">
+              <div class="row">
+                <div class="col-12">
+                  {% for skill in skills %}
+                  <h5>{{ skill.skill }}</h5>
+                  <div class="progress-outer">
+                    <div class="progress">
+                      <div
+                        class="progress-bar progress-bar-success progress-bar-striped active"
+                        style="width:{{
+                          skill.percent
+                        }}%; box-shadow:-1px 10px 10px rgba(116, 195, 116,0.7);"
+                      ></div>
+                      <div class="progress-value">{{ skill.percent }}%</div>
+                    </div>
+                  </div>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+            <div class="icons-container">
+              <h2>Eingesetzte Programme</h2>
+              {{ render("programm") }}
+            </div>
+            <!-- end of icons-container -->
+          </div>
+          <!-- end of text-container -->
+          <!-- end of text container -->
+        </div>
+        <!-- end of col -->
+      </div>
+      <!-- end of row -->
+    </div>
+    <!-- end of container -->
+  </div>
+  <!-- end of area-2 -->
+</div>
+<!-- end of split -->
+<!-- end of details -->
+{% endblock %}

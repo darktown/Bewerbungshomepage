@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %} {% block css %}
+{{ parent() }}
+{% endblock %} {% block body %} {# {% include "/head/index.html.twig" %} #}
+{{ parent() }}
+{{ render("head") }}
+{{ render("about") }}
+{{ render("skills") }}
+{{ render("csv") }}
+{{ render("modal" )}}
+{% endblock %}

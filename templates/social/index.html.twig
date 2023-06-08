@@ -1,0 +1,14 @@
+
+{% block body %}
+
+  <div class="social-container">
+  {% for social in socials %}
+    <span class="fa-stack">
+      <a href="{{ social.link }}">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class=" {{ social.icon }} fa-stack-1x"></i>
+      </a>
+    </span>
+  {% endfor %}
+  </div>
+{% endblock %}

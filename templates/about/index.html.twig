@@ -1,0 +1,51 @@
+
+
+{% block body %}
+
+    <!-- About-->
+    <div id="about" class="basic-1 bg-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="text-container first">
+                        <h2>Hi ich bin Rene</h2>
+                        <p>
+                            {{section.text}}
+                        </p>
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-4">
+                    <div class="text-container second" >
+                        {% for lebenslaufitem in test %}
+                        <div class="time">{{lebenslaufitem.datebegin}} - {{lebenslaufitem.dateend}}</div>
+                        <h6>{{lebenslaufitem.firma}}</h6>
+                        <p>{{lebenslaufitem.info}}</p>
+                        {# <div class="time">2018 - 2019</div>
+                        <h6>Lead Web Developer</h6>
+                        <p>Beautiful project for a major digital agency</p> #}
+
+                        {% endfor %}
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+                <div class="col-lg-4">
+                    <div class="text-container third">
+                        {% for lebenslauf2 in section2 %}
+                        <div class="time">{{lebenslauf2.datebegin}} - {{lebenslauf2.dateend}}</div>
+                        <h6>{{lebenslauf2.firma}}</h6>
+                        <p>{{lebenslauf2.info}}</p>
+                        {% endfor %}
+                        {# <div class="time">2017 - 2018</div>
+                        <h6>Senior Web Designer</h6>
+                        <p>Inhouse web designer for ecommerce firm</p>
+                        <div class="time">2016 - 2017</div>
+                        <h6>Junior Web Designer</h6>
+                        <p>Junior web designer for small web agency</p> #}
+                    </div> <!-- end of text-container -->
+                </div> <!-- end of col -->
+            </div> <!-- end of row -->
+        </div> <!-- end of container -->
+    </div> <!-- end of basic-1 -->
+    <!-- end of about -->
+
+
+{% endblock %}
