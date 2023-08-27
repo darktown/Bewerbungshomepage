@@ -464,6 +464,14 @@
         <argument type="service" id=".service_locator.UIrHhwh.App\Controller\Admin\ProgrammCrudController"/>
       </call>
     </service>
+    <service id="App\Controller\Admin\ProjekteCrudController" class="App\Controller\Admin\ProjekteCrudController" public="true" autowire="true" autoconfigure="true">
+      <tag name="ea.crud_controller"/>
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.UIrHhwh.App\Controller\Admin\ProjekteCrudController"/>
+      </call>
+    </service>
     <service id="App\Controller\Admin\SkillsCrudController" class="App\Controller\Admin\SkillsCrudController" public="true" autowire="true" autoconfigure="true">
       <tag name="ea.crud_controller"/>
       <tag name="controller.service_arguments"/>
@@ -557,6 +565,13 @@
         <argument type="service" id=".service_locator.mx0UMmY.App\Controller\ProgrammController"/>
       </call>
     </service>
+    <service id="App\Controller\ProjekteController" class="App\Controller\ProjekteController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.mx0UMmY.App\Controller\ProjekteController"/>
+      </call>
+    </service>
     <service id="App\Controller\SecurityController" class="App\Controller\SecurityController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -599,6 +614,10 @@
       <argument type="service" id="doctrine"/>
     </service>
     <service id="App\Repository\ProgrammRepository" class="App\Repository\ProgrammRepository" autowire="true" autoconfigure="true">
+      <tag name="doctrine.repository_service"/>
+      <argument type="service" id="doctrine"/>
+    </service>
+    <service id="App\Repository\ProjekteRepository" class="App\Repository\ProjekteRepository" autowire="true" autoconfigure="true">
       <tag name="doctrine.repository_service"/>
       <argument type="service" id="doctrine"/>
     </service>
@@ -3169,7 +3188,7 @@
     <service id="doctrine.orm.configuration" class="Doctrine\ORM\Configuration" abstract="true"/>
     <service id="doctrine.orm.entity_manager.abstract" class="Doctrine\ORM\EntityManager" lazy="true" abstract="true"/>
     <service id="doctrine.orm.container_repository_factory" class="Doctrine\Bundle\DoctrineBundle\Repository\ContainerRepositoryFactory">
-      <argument type="service" id=".service_locator.pcUA.W2"/>
+      <argument type="service" id=".service_locator.d_zzIT7"/>
     </service>
     <service id="doctrine.orm.manager_configurator.abstract" class="Doctrine\Bundle\DoctrineBundle\ManagerConfigurator" abstract="true">
       <argument type="collection"/>
@@ -5777,6 +5796,10 @@
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Admin\ProgrammCrudController" class="App\Controller\Admin\ProgrammCrudController" autowire="true" abstract="true"/>
     <service id=".instanceof.EasyCorp\Bundle\EasyAdminBundle\Contracts\Controller\CrudControllerInterface.0.App\Controller\Admin\ProgrammCrudController" class="App\Controller\Admin\ProgrammCrudController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\Admin\ProgrammCrudController" class="App\Controller\Admin\ProgrammCrudController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\Admin\ProjekteCrudController" class="App\Controller\Admin\ProjekteCrudController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Admin\ProjekteCrudController" class="App\Controller\Admin\ProjekteCrudController" autowire="true" abstract="true"/>
+    <service id=".instanceof.EasyCorp\Bundle\EasyAdminBundle\Contracts\Controller\CrudControllerInterface.0.App\Controller\Admin\ProjekteCrudController" class="App\Controller\Admin\ProjekteCrudController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\Admin\ProjekteCrudController" class="App\Controller\Admin\ProjekteCrudController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\Admin\SkillsCrudController" class="App\Controller\Admin\SkillsCrudController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Admin\SkillsCrudController" class="App\Controller\Admin\SkillsCrudController" autowire="true" abstract="true"/>
     <service id=".instanceof.EasyCorp\Bundle\EasyAdminBundle\Contracts\Controller\CrudControllerInterface.0.App\Controller\Admin\SkillsCrudController" class="App\Controller\Admin\SkillsCrudController" autowire="true" abstract="true"/>
@@ -5818,6 +5841,9 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ProgrammController" class="App\Controller\ProgrammController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ProgrammController" class="App\Controller\ProgrammController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\ProgrammController" class="App\Controller\ProgrammController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ProjekteController" class="App\Controller\ProjekteController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ProjekteController" class="App\Controller\ProjekteController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\ProjekteController" class="App\Controller\ProjekteController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\SecurityController" class="App\Controller\SecurityController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\SecurityController" class="App\Controller\SecurityController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\SecurityController" class="App\Controller\SecurityController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -5839,6 +5865,8 @@
     <service id=".abstract.instanceof.App\Repository\LebenslaufRepository" class="App\Repository\LebenslaufRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ProgrammRepository" class="App\Repository\ProgrammRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\ProgrammRepository" class="App\Repository\ProgrammRepository" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\ProjekteRepository" class="App\Repository\ProjekteRepository" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Repository\ProjekteRepository" class="App\Repository\ProjekteRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\SkillsRepository" class="App\Repository\SkillsRepository" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Repository\SkillsRepository" class="App\Repository\SkillsRepository" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepositoryInterface.0.App\Repository\SocialRepository" class="App\Repository\SocialRepository" autowire="true" abstract="true"/>
@@ -6389,7 +6417,7 @@
         <argument key="httpKernel" type="service_closure" id="http_kernel"/>
       </argument>
     </service>
-    <service id=".service_locator.sW3qh0_" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.ttQlvWs" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Controller\AboutController::index" type="service_closure" id=".service_locator.uZpMBXS"/>
@@ -6520,6 +6548,27 @@
         <argument key="App\Controller\Admin\ProgrammCrudController::persistEntity" type="service_closure" id=".service_locator.aKM6MDa"/>
         <argument key="App\Controller\Admin\ProgrammCrudController::renderFilters" type="service_closure" id=".service_locator.kEvhmk9"/>
         <argument key="App\Controller\Admin\ProgrammCrudController::updateEntity" type="service_closure" id=".service_locator.aKM6MDa"/>
+        <argument key="App\Controller\Admin\ProjekteCrudController::autocomplete" type="service_closure" id=".service_locator.kEvhmk9"/>
+        <argument key="App\Controller\Admin\ProjekteCrudController::batchDelete" type="service_closure" id=".service_locator.esmk6IF"/>
+        <argument key="App\Controller\Admin\ProjekteCrudController::configureActions" type="service_closure" id=".service_locator.R8Qy2_."/>
+        <argument key="App\Controller\Admin\ProjekteCrudController::configureAssets" type="service_closure" id=".service_locator.XdMPwIJ"/>
+        <argument key="App\Controller\Admin\ProjekteCrudController::configureCrud" type="service_closure" id=".service_locator.XpfeRo6"/>
+        <argument key="App\Controller\Admin\ProjekteCrudController::configureFilters" type="service_closure" id=".service_locator.OGjUKCt"/>
+        <argument key="App\Controller\Admin\ProjekteCrudController::configureResponseParameters" type="service_closure" id=".service_locator.W.c5h2_"/>
+        <argument key="App\Controller\Admin\ProjekteCrudController::createEditForm" type="service_closure" id=".service_locator.riFbGaB"/>
+        <argument key="App\Controller\Admin\ProjekteCrudController::createEditFormBuilder" type="service_closure" id=".service_locator.riFbGaB"/>
+        <argument key="App\Controller\Admin\ProjekteCrudController::createIndexQueryBuilder" type="service_closure" id=".service_locator.ENGuM7_"/>
+        <argument key="App\Controller\Admin\ProjekteCrudController::createNewForm" type="service_closure" id=".service_locator.riFbGaB"/>
+        <argument key="App\Controller\Admin\ProjekteCrudController::createNewFormBuilder" type="service_closure" id=".service_locator.riFbGaB"/>
+        <argument key="App\Controller\Admin\ProjekteCrudController::delete" type="service_closure" id=".service_locator.kEvhmk9"/>
+        <argument key="App\Controller\Admin\ProjekteCrudController::deleteEntity" type="service_closure" id=".service_locator.aKM6MDa"/>
+        <argument key="App\Controller\Admin\ProjekteCrudController::detail" type="service_closure" id=".service_locator.kEvhmk9"/>
+        <argument key="App\Controller\Admin\ProjekteCrudController::edit" type="service_closure" id=".service_locator.kEvhmk9"/>
+        <argument key="App\Controller\Admin\ProjekteCrudController::index" type="service_closure" id=".service_locator.kEvhmk9"/>
+        <argument key="App\Controller\Admin\ProjekteCrudController::new" type="service_closure" id=".service_locator.kEvhmk9"/>
+        <argument key="App\Controller\Admin\ProjekteCrudController::persistEntity" type="service_closure" id=".service_locator.aKM6MDa"/>
+        <argument key="App\Controller\Admin\ProjekteCrudController::renderFilters" type="service_closure" id=".service_locator.kEvhmk9"/>
+        <argument key="App\Controller\Admin\ProjekteCrudController::updateEntity" type="service_closure" id=".service_locator.aKM6MDa"/>
         <argument key="App\Controller\Admin\SkillsCrudController::autocomplete" type="service_closure" id=".service_locator.kEvhmk9"/>
         <argument key="App\Controller\Admin\SkillsCrudController::batchDelete" type="service_closure" id=".service_locator.esmk6IF"/>
         <argument key="App\Controller\Admin\SkillsCrudController::configureActions" type="service_closure" id=".service_locator.R8Qy2_."/>
@@ -6705,6 +6754,27 @@
         <argument key="App\Controller\Admin\ProgrammCrudController:persistEntity" type="service_closure" id=".service_locator.aKM6MDa"/>
         <argument key="App\Controller\Admin\ProgrammCrudController:renderFilters" type="service_closure" id=".service_locator.kEvhmk9"/>
         <argument key="App\Controller\Admin\ProgrammCrudController:updateEntity" type="service_closure" id=".service_locator.aKM6MDa"/>
+        <argument key="App\Controller\Admin\ProjekteCrudController:autocomplete" type="service_closure" id=".service_locator.kEvhmk9"/>
+        <argument key="App\Controller\Admin\ProjekteCrudController:batchDelete" type="service_closure" id=".service_locator.esmk6IF"/>
+        <argument key="App\Controller\Admin\ProjekteCrudController:configureActions" type="service_closure" id=".service_locator.R8Qy2_."/>
+        <argument key="App\Controller\Admin\ProjekteCrudController:configureAssets" type="service_closure" id=".service_locator.XdMPwIJ"/>
+        <argument key="App\Controller\Admin\ProjekteCrudController:configureCrud" type="service_closure" id=".service_locator.XpfeRo6"/>
+        <argument key="App\Controller\Admin\ProjekteCrudController:configureFilters" type="service_closure" id=".service_locator.OGjUKCt"/>
+        <argument key="App\Controller\Admin\ProjekteCrudController:configureResponseParameters" type="service_closure" id=".service_locator.W.c5h2_"/>
+        <argument key="App\Controller\Admin\ProjekteCrudController:createEditForm" type="service_closure" id=".service_locator.riFbGaB"/>
+        <argument key="App\Controller\Admin\ProjekteCrudController:createEditFormBuilder" type="service_closure" id=".service_locator.riFbGaB"/>
+        <argument key="App\Controller\Admin\ProjekteCrudController:createIndexQueryBuilder" type="service_closure" id=".service_locator.ENGuM7_"/>
+        <argument key="App\Controller\Admin\ProjekteCrudController:createNewForm" type="service_closure" id=".service_locator.riFbGaB"/>
+        <argument key="App\Controller\Admin\ProjekteCrudController:createNewFormBuilder" type="service_closure" id=".service_locator.riFbGaB"/>
+        <argument key="App\Controller\Admin\ProjekteCrudController:delete" type="service_closure" id=".service_locator.kEvhmk9"/>
+        <argument key="App\Controller\Admin\ProjekteCrudController:deleteEntity" type="service_closure" id=".service_locator.aKM6MDa"/>
+        <argument key="App\Controller\Admin\ProjekteCrudController:detail" type="service_closure" id=".service_locator.kEvhmk9"/>
+        <argument key="App\Controller\Admin\ProjekteCrudController:edit" type="service_closure" id=".service_locator.kEvhmk9"/>
+        <argument key="App\Controller\Admin\ProjekteCrudController:index" type="service_closure" id=".service_locator.kEvhmk9"/>
+        <argument key="App\Controller\Admin\ProjekteCrudController:new" type="service_closure" id=".service_locator.kEvhmk9"/>
+        <argument key="App\Controller\Admin\ProjekteCrudController:persistEntity" type="service_closure" id=".service_locator.aKM6MDa"/>
+        <argument key="App\Controller\Admin\ProjekteCrudController:renderFilters" type="service_closure" id=".service_locator.kEvhmk9"/>
+        <argument key="App\Controller\Admin\ProjekteCrudController:updateEntity" type="service_closure" id=".service_locator.aKM6MDa"/>
         <argument key="App\Controller\Admin\SkillsCrudController:autocomplete" type="service_closure" id=".service_locator.kEvhmk9"/>
         <argument key="App\Controller\Admin\SkillsCrudController:batchDelete" type="service_closure" id=".service_locator.esmk6IF"/>
         <argument key="App\Controller\Admin\SkillsCrudController:configureActions" type="service_closure" id=".service_locator.R8Qy2_."/>
@@ -6847,7 +6917,7 @@
         <argument key="vich_uploader.listener.upload.products" type="service_closure" id="vich_uploader.listener.upload.products"/>
       </argument>
     </service>
-    <service id=".service_locator.pcUA.W2" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.d_zzIT7" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="App\Repository\BerufswegRepository" type="service_closure" id="App\Repository\BerufswegRepository"/>
@@ -6856,6 +6926,7 @@
         <argument key="App\Repository\ImpressumRepository" type="service_closure" id="App\Repository\ImpressumRepository"/>
         <argument key="App\Repository\LebenslaufRepository" type="service_closure" id="App\Repository\LebenslaufRepository"/>
         <argument key="App\Repository\ProgrammRepository" type="service_closure" id="App\Repository\ProgrammRepository"/>
+        <argument key="App\Repository\ProjekteRepository" type="service_closure" id="App\Repository\ProjekteRepository"/>
         <argument key="App\Repository\SkillsRepository" type="service_closure" id="App\Repository\SkillsRepository"/>
         <argument key="App\Repository\SocialRepository" type="service_closure" id="App\Repository\SocialRepository"/>
         <argument key="App\Repository\TexteRepository" type="service_closure" id="App\Repository\TexteRepository"/>
@@ -6923,6 +6994,7 @@
         <argument>App\Controller\Admin\ImpressumCrudController</argument>
         <argument>App\Controller\Admin\LebenslaufCrudController</argument>
         <argument>App\Controller\Admin\ProgrammCrudController</argument>
+        <argument>App\Controller\Admin\ProjekteCrudController</argument>
         <argument>App\Controller\Admin\SkillsCrudController</argument>
         <argument>App\Controller\Admin\SocialCrudController</argument>
       </argument>
@@ -7055,6 +7127,12 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.UIrHhwh" method="withContext"/>
     </service>
+    <service id=".service_locator.UIrHhwh.App\Controller\Admin\ProjekteCrudController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\Admin\ProjekteCrudController"/>
+      <argument>App\Controller\Admin\ProjekteCrudController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.UIrHhwh" method="withContext"/>
+    </service>
     <service id=".service_locator.UIrHhwh.App\Controller\Admin\SkillsCrudController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\Admin\SkillsCrudController"/>
       <argument>App\Controller\Admin\SkillsCrudController</argument>
@@ -7130,6 +7208,12 @@
     <service id=".service_locator.mx0UMmY.App\Controller\ProgrammController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\ProgrammController"/>
       <argument>App\Controller\ProgrammController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.mx0UMmY" method="withContext"/>
+    </service>
+    <service id=".service_locator.mx0UMmY.App\Controller\ProjekteController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\ProjekteController"/>
+      <argument>App\Controller\ProjekteController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.mx0UMmY" method="withContext"/>
     </service>
@@ -7299,12 +7383,12 @@
       <argument type="service" id="EasyCorp\Bundle\EasyAdminBundle\Router\AdminUrlGenerator"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator.sW3qh0_"/>
+      <argument type="service" id=".service_locator.ttQlvWs"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator.sW3qh0_"/>
+      <argument type="service" id=".service_locator.ttQlvWs"/>
     </service>
     <service id=".doctrine.orm.default_metadata_driver.inner" class="Doctrine\Persistence\Mapping\Driver\MappingDriverChain">
       <call method="addDriver">
@@ -8145,7 +8229,7 @@
     <service id="Vich\UploaderBundle\Form\Type\VichImageType" alias="vich_uploader.form.type.image"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.gSv9zYw" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.sW3qh0_"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.ttQlvWs"/>
     <service id="session" alias=".session.do-not-use" public="true">
       <deprecated package="symfony/framework-bundle" version="5.3">The "%alias_id%" service and "SessionInterface" alias are deprecated, use "$requestStack-&gt;getSession()" instead.</deprecated>
     </service>
@@ -8160,7 +8244,7 @@
     <service id=".service_locator.6rNHno." alias=".service_locator.riFbGaB"/>
     <service id=".service_locator.gZSclBa" alias=".service_locator.UgVKvM8"/>
     <service id=".service_locator.TdimCxg" alias=".service_locator.FQlNG.j"/>
-    <service id=".service_locator.uTgJHO8" alias=".service_locator.sW3qh0_"/>
+    <service id=".service_locator.zcj8HfZ" alias=".service_locator.ttQlvWs"/>
     <service id=".service_locator.dGCiWgN" alias=".service_locator.QvoMIgq"/>
     <service id=".service_locator.Fi65qnD" alias=".service_locator.D5RiGbz"/>
     <service id=".service_locator.O24_MAy" alias=".service_locator.yY.p4P7"/>

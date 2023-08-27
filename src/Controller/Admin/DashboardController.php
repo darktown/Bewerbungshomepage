@@ -10,6 +10,7 @@ use App\Entity\Programm;
 use App\Entity\Skills;
 use App\Entity\Social;
 use App\Entity\Csv;
+use App\Entity\Projekte;
 use EasyCorp\Bundle\EasyAdminBundle\Config\MenuItem;
 use EasyCorp\Bundle\EasyAdminBundle\Router\AdminUrlGenerator;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractDashboardController;
@@ -48,6 +49,7 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Skills', 'far fa-address-card', Skills::class);
         yield MenuItem::linkToCrud('Impressum', 'far fa-address-card', Impressum::class);
         yield MenuItem::linkToCrud('Programme', 'far fa-address-card', Programm::class);
+        yield MenuItem::linkToCrud('Projekte', 'far fa-address-card', Projekte::class);
         //yield MenuItem::linkToCrud('The Label', 'fas fa-list', BerufswegCrudController::class);
     }
 }

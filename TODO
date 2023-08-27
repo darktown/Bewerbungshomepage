@@ -2,13 +2,13 @@
 Todo:
   ☐ Projekte page anlegen @started(23-06-08 21:10)
   ✔ Controller anlegen @started(23-06-08 21:11) @done(23-06-08 21:11) @lasted(12s)
-  ☐ Entity anlegen
-    ☐ datenbankeintrag über migration anlegen
-      - Projektname -> string
-      - beschreibung -> Text
-      - Link -> string
-      - image -> text
-  ☐ crud im EasyAdmin anlegen
+  ✔ Entity anlegen @started(23-06-11 17:23) @done(23-06-11 17:43) @lasted(20m4s)
+    ✔ datenbankeintrag über migration anlegen @done(23-06-11 17:42)
+      ✔ Projektname -> string @done(23-06-11 17:43)
+      ✔ beschreibung -> Text @done(23-06-11 17:43)
+      ✔ Link -> string @done(23-06-11 17:43)
+      ✔ image -> text @done(23-06-11 17:43)
+  ✔ crud im EasyAdmin anlegen @started(23-06-26 18:49) @done(23-06-26 19:07) @lasted(18m53s)
   ☐ Einbinden auf den Onepager
     ☐ Titel des Projektes und Vorschaubild auf der seite anzeigen lassen
   ☐ Projekte als Hover laden mit Link zum Github

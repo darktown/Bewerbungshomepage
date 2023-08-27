@@ -21,6 +21,7 @@ return [
         '/nav/bar' => [[['_route' => 'app_nav_bar', '_controller' => 'App\\Controller\\NavBarController::index'], null, null, null, false, false, null]],
         '/nav/bar/imprint' => [[['_route' => 'app_nav_bar_imprint', '_controller' => 'App\\Controller\\NavBarImprintController::index'], null, null, null, false, false, null]],
         '/programm' => [[['_route' => 'app_programm', '_controller' => 'App\\Controller\\ProgrammController::index'], null, null, null, false, false, null]],
+        '/projekte' => [[['_route' => 'app_projekte', '_controller' => 'App\\Controller\\ProjekteController::index'], null, null, null, false, false, null]],
         '/login' => [[['_route' => 'app_login', '_controller' => 'App\\Controller\\SecurityController::login'], null, null, null, false, false, null]],
         '/logout' => [[['_route' => 'app_logout', '_controller' => 'App\\Controller\\SecurityController::logout'], null, null, null, false, false, null]],
         '/skills' => [[['_route' => 'app_skills', '_controller' => 'App\\Controller\\SkillsController::index'], null, null, null, false, false, null]],

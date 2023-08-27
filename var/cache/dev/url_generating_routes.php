@@ -16,6 +16,7 @@ return [
     'app_nav_bar' => [[], ['_controller' => 'App\\Controller\\NavBarController::index'], [], [['text', '/nav/bar']], [], [], []],
     'app_nav_bar_imprint' => [[], ['_controller' => 'App\\Controller\\NavBarImprintController::index'], [], [['text', '/nav/bar/imprint']], [], [], []],
     'app_programm' => [[], ['_controller' => 'App\\Controller\\ProgrammController::index'], [], [['text', '/programm']], [], [], []],
+    'app_projekte' => [[], ['_controller' => 'App\\Controller\\ProjekteController::index'], [], [['text', '/projekte']], [], [], []],
     'app_login' => [[], ['_controller' => 'App\\Controller\\SecurityController::login'], [], [['text', '/login']], [], [], []],
     'app_logout' => [[], ['_controller' => 'App\\Controller\\SecurityController::logout'], [], [['text', '/logout']], [], [], []],
     'app_skills' => [[], ['_controller' => 'App\\Controller\\SkillsController::index'], [], [['text', '/skills']], [], [], []],
