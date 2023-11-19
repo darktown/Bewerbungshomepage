@@ -81,6 +81,10 @@ class __TwigTemplate_4f0d51f86c02434c67d679fa26150e49 extends Template
         echo $this->env->getRuntime('Symfony\Bridge\Twig\Extension\HttpKernelRuntime')->renderFragment("modal");
         echo "
 ";
+        // line 10
+        echo $this->env->getRuntime('Symfony\Bridge\Twig\Extension\HttpKernelRuntime')->renderFragment("projekte");
+        echo "
+";
     }
 
     public function getTemplateName()
@@ -95,7 +99,7 @@ class __TwigTemplate_4f0d51f86c02434c67d679fa26150e49 extends Template
 
     public function getDebugInfo()
     {
-        return array (  81 => 9,  77 => 8,  73 => 7,  69 => 6,  65 => 5,  61 => 4,  56 => 3,  50 => 2,  36 => 1,);
+        return array (  85 => 10,  81 => 9,  77 => 8,  73 => 7,  69 => 6,  65 => 5,  61 => 4,  56 => 3,  50 => 2,  36 => 1,);
     }
 
     public function getSourceContext()

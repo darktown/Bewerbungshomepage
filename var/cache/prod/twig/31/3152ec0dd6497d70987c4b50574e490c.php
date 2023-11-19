@@ -95,10 +95,7 @@ class __TwigTemplate_b864653faa73421859bef1348d2d5612 extends Template
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["head"], "linktext", [], "any", false, false, false, 19), "html", null, true);
             echo "
                     </a>
-                    <a class=\"btn-outline-lg page-scroll\" href=\"";
-            // line 21
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("impressum");
-            echo "\">
+                    <a class=\"btn-outline-lg page-scroll\" href=\"\" data-toggle=\"modal\" data-target=\"#myModal\" class=\"nav-link page-scroll test\" >
                       <i class=\"fas fa-user\"></i>Contact Me
                     </a>
                   </div>
@@ -134,7 +131,7 @@ class __TwigTemplate_b864653faa73421859bef1348d2d5612 extends Template
 
     public function getDebugInfo()
     {
-        return array (  119 => 26,  100 => 21,  95 => 19,  91 => 18,  86 => 16,  77 => 14,  74 => 13,  57 => 12,  45 => 2,  38 => 1,);
+        return array (  116 => 26,  95 => 19,  91 => 18,  86 => 16,  77 => 14,  74 => 13,  57 => 12,  45 => 2,  38 => 1,);
     }
 
     public function getSourceContext()

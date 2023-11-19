@@ -16,9 +16,8 @@ require_once __DIR__.\DIRECTORY_SEPARATOR.'RootConfig'.\DIRECTORY_SEPARATOR.'Mys
 use Symfony\Component\Config\Loader\ParamConfigurator;
 use Symfony\Component\Config\Definition\Exception\InvalidConfigurationException;
 
-
 /**
- * This class is automatically generated to help creating config.
+ * This class is automatically generated to help in creating a config.
  */
 class RootConfig 
 {
@@ -78,7 +77,8 @@ class RootConfig
     private $onedriveSettings;
     private $ftpSettings;
     private $mysqlSettings;
-    
+    private $_usedProperties = [];
+
     /**
      * @default 'LocalFileSystem'
      * @param ParamConfigurator|mixed $value
@@ -86,11 +86,12 @@ class RootConfig
      */
     public function driver($value): self
     {
+        $this->_usedProperties['driver'] = true;
         $this->driver = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default 0
      * @param ParamConfigurator|int $value
@@ -98,22 +99,24 @@ class RootConfig
      */
     public function volumeId($value): self
     {
+        $this->_usedProperties['volumeId'] = true;
         $this->volumeId = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @param ParamConfigurator|mixed $value
      * @return $this
      */
     public function path($value): self
     {
+        $this->_usedProperties['path'] = true;
         $this->path = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default false
      * @param ParamConfigurator|bool $value
@@ -121,44 +124,48 @@ class RootConfig
      */
     public function autoload($value): self
     {
+        $this->_usedProperties['autoload'] = true;
         $this->autoload = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @param ParamConfigurator|mixed $value
      * @return $this
      */
     public function phash($value): self
     {
+        $this->_usedProperties['phash'] = true;
         $this->phash = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @param ParamConfigurator|mixed $value
      * @return $this
      */
     public function trashHash($value): self
     {
+        $this->_usedProperties['trashHash'] = true;
         $this->trashHash = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @param ParamConfigurator|mixed $value
      * @return $this
      */
     public function locale($value): self
     {
+        $this->_usedProperties['locale'] = true;
         $this->locale = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default false
      * @param ParamConfigurator|bool $value
@@ -166,11 +173,12 @@ class RootConfig
      */
     public function i18nFolderName($value): self
     {
+        $this->_usedProperties['i18nFolderName'] = true;
         $this->i18nFolderName = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default 'auto'
      * @param ParamConfigurator|mixed $value
@@ -178,44 +186,48 @@ class RootConfig
      */
     public function mimeDetect($value): self
     {
+        $this->_usedProperties['mimeDetect'] = true;
         $this->mimeDetect = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @param ParamConfigurator|mixed $value
      * @return $this
      */
     public function mimefile($value): self
     {
+        $this->_usedProperties['mimefile'] = true;
         $this->mimefile = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @param ParamConfigurator|mixed $value
      * @return $this
      */
     public function securityVoter($value): self
     {
+        $this->_usedProperties['securityVoter'] = true;
         $this->securityVoter = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @param ParamConfigurator|mixed $value
      * @return $this
      */
     public function startPath($value): self
     {
+        $this->_usedProperties['startPath'] = true;
         $this->startPath = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default 'UTF-8'
      * @param ParamConfigurator|mixed $value
@@ -223,33 +235,36 @@ class RootConfig
      */
     public function encoding($value): self
     {
+        $this->_usedProperties['encoding'] = true;
         $this->encoding = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @param ParamConfigurator|mixed $value
      * @return $this
      */
     public function url($value): self
     {
+        $this->_usedProperties['url'] = true;
         $this->url = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @param ParamConfigurator|mixed $value
      * @return $this
      */
     public function alias($value): self
     {
+        $this->_usedProperties['alias'] = true;
         $this->alias = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default 'auto'
      * @param ParamConfigurator|mixed $value
@@ -257,11 +272,12 @@ class RootConfig
      */
     public function imgLib($value): self
     {
+        $this->_usedProperties['imgLib'] = true;
         $this->imgLib = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default '.tmb'
      * @param ParamConfigurator|mixed $value
@@ -269,11 +285,12 @@ class RootConfig
      */
     public function tmbPath($value): self
     {
+        $this->_usedProperties['tmbPath'] = true;
         $this->tmbPath = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default 511
      * @param ParamConfigurator|mixed $value
@@ -281,22 +298,24 @@ class RootConfig
      */
     public function tmbPathMode($value): self
     {
+        $this->_usedProperties['tmbPathMode'] = true;
         $this->tmbPathMode = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @param ParamConfigurator|mixed $value
      * @return $this
      */
     public function tmbUrl($value): self
     {
+        $this->_usedProperties['tmbUrl'] = true;
         $this->tmbUrl = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default 48
      * @param ParamConfigurator|int $value
@@ -304,11 +323,12 @@ class RootConfig
      */
     public function tmbSize($value): self
     {
+        $this->_usedProperties['tmbSize'] = true;
         $this->tmbSize = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default true
      * @param ParamConfigurator|bool $value
@@ -316,11 +336,12 @@ class RootConfig
      */
     public function tmbCrop($value): self
     {
+        $this->_usedProperties['tmbCrop'] = true;
         $this->tmbCrop = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default '#ffffff'
      * @param ParamConfigurator|mixed $value
@@ -328,11 +349,12 @@ class RootConfig
      */
     public function tmbBgColor($value): self
     {
+        $this->_usedProperties['tmbBgColor'] = true;
         $this->tmbBgColor = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default null
      * @param ParamConfigurator|mixed $value
@@ -340,11 +362,12 @@ class RootConfig
      */
     public function quarantine($value): self
     {
+        $this->_usedProperties['quarantine'] = true;
         $this->quarantine = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default true
      * @param ParamConfigurator|bool $value
@@ -352,11 +375,12 @@ class RootConfig
      */
     public function copyOverwrite($value): self
     {
+        $this->_usedProperties['copyOverwrite'] = true;
         $this->copyOverwrite = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default true
      * @param ParamConfigurator|bool $value
@@ -364,11 +388,12 @@ class RootConfig
      */
     public function copyJoin($value): self
     {
+        $this->_usedProperties['copyJoin'] = true;
         $this->copyJoin = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default true
      * @param ParamConfigurator|bool $value
@@ -376,11 +401,12 @@ class RootConfig
      */
     public function copyFrom($value): self
     {
+        $this->_usedProperties['copyFrom'] = true;
         $this->copyFrom = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default true
      * @param ParamConfigurator|bool $value
@@ -388,11 +414,12 @@ class RootConfig
      */
     public function copyTo($value): self
     {
+        $this->_usedProperties['copyTo'] = true;
         $this->copyTo = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default true
      * @param ParamConfigurator|bool $value
@@ -400,11 +427,12 @@ class RootConfig
      */
     public function uploadOverwrite($value): self
     {
+        $this->_usedProperties['uploadOverwrite'] = true;
         $this->uploadOverwrite = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default 420
      * @param ParamConfigurator|mixed $value
@@ -412,44 +440,48 @@ class RootConfig
      */
     public function fileMode($value): self
     {
+        $this->_usedProperties['fileMode'] = true;
         $this->fileMode = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @param ParamConfigurator|list<mixed|ParamConfigurator> $value
      * @return $this
      */
     public function uploadAllow($value): self
     {
+        $this->_usedProperties['uploadAllow'] = true;
         $this->uploadAllow = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @param ParamConfigurator|list<mixed|ParamConfigurator> $value
      * @return $this
      */
     public function uploadDeny($value): self
     {
+        $this->_usedProperties['uploadDeny'] = true;
         $this->uploadDeny = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @param ParamConfigurator|list<mixed|ParamConfigurator> $value
      * @return $this
      */
     public function uploadOrder($value): self
     {
+        $this->_usedProperties['uploadOrder'] = true;
         $this->uploadOrder = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default 0
      * @param ParamConfigurator|mixed $value
@@ -457,11 +489,12 @@ class RootConfig
      */
     public function uploadMaxSize($value): self
     {
+        $this->_usedProperties['uploadMaxSize'] = true;
         $this->uploadMaxSize = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default 3
      * @param ParamConfigurator|int $value
@@ -469,27 +502,31 @@ class RootConfig
      */
     public function uploadMaxConn($value): self
     {
+        $this->_usedProperties['uploadMaxConn'] = true;
         $this->uploadMaxConn = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @param ParamConfigurator|bool $value
      * @return $this
      */
     public function defaults(string $defaults, $value): self
     {
+        $this->_usedProperties['defaults'] = true;
         $this->defaults[$defaults] = $value;
-    
+
         return $this;
     }
-    
+
     public function attributes(array $value = []): \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\AttributesConfig
     {
+        $this->_usedProperties['attributes'] = true;
+
         return $this->attributes[] = new \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\AttributesConfig($value);
     }
-    
+
     /**
      * @default '/^\\w[\\w\\s\\.\\%\\-]*$/u'
      * @param ParamConfigurator|mixed $value
@@ -497,11 +534,12 @@ class RootConfig
      */
     public function acceptedName($value): self
     {
+        $this->_usedProperties['acceptedName'] = true;
         $this->acceptedName = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default false
      * @param ParamConfigurator|bool $value
@@ -509,22 +547,24 @@ class RootConfig
      */
     public function showHidden($value): self
     {
+        $this->_usedProperties['showHidden'] = true;
         $this->showHidden = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @param ParamConfigurator|list<mixed|ParamConfigurator> $value
      * @return $this
      */
     public function disabledCommands($value): self
     {
+        $this->_usedProperties['disabledCommands'] = true;
         $this->disabledCommands = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default 0
      * @param ParamConfigurator|int $value
@@ -532,11 +572,12 @@ class RootConfig
      */
     public function treeDeep($value): self
     {
+        $this->_usedProperties['treeDeep'] = true;
         $this->treeDeep = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default 1
      * @param ParamConfigurator|int $value
@@ -544,11 +585,12 @@ class RootConfig
      */
     public function checkSubfolders($value): self
     {
+        $this->_usedProperties['checkSubfolders'] = true;
         $this->checkSubfolders = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default '\\'
      * @param ParamConfigurator|mixed $value
@@ -556,11 +598,12 @@ class RootConfig
      */
     public function separator($value): self
     {
+        $this->_usedProperties['separator'] = true;
         $this->separator = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default 'j M Y H:i'
      * @param ParamConfigurator|mixed $value
@@ -568,11 +611,12 @@ class RootConfig
      */
     public function dateFormat($value): self
     {
+        $this->_usedProperties['dateFormat'] = true;
         $this->dateFormat = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default 'H:i'
      * @param ParamConfigurator|mixed $value
@@ -580,605 +624,741 @@ class RootConfig
      */
     public function timeFormat($value): self
     {
+        $this->_usedProperties['timeFormat'] = true;
         $this->timeFormat = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @param ParamConfigurator|list<mixed|ParamConfigurator> $value
      * @return $this
      */
     public function archiveMimes($value): self
     {
+        $this->_usedProperties['archiveMimes'] = true;
         $this->archiveMimes = $value;
-    
+
         return $this;
     }
-    
-    public function archivers(array $value = []): \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\ArchiversConfig
+
+    /**
+     * @return \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\ArchiversConfig|$this
+     */
+    public function archivers($value = [])
     {
-        if (null === $this->archivers) {
+        if (!\is_array($value)) {
+            $this->_usedProperties['archivers'] = true;
+            $this->archivers = $value;
+
+            return $this;
+        }
+
+        if (!$this->archivers instanceof \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\ArchiversConfig) {
+            $this->_usedProperties['archivers'] = true;
             $this->archivers = new \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\ArchiversConfig($value);
-        } elseif ([] !== $value) {
+        } elseif (0 < \func_num_args()) {
             throw new InvalidConfigurationException('The node created by "archivers()" has already been initialized. You cannot pass values the second time you call archivers().');
         }
-    
+
         return $this->archivers;
     }
-    
-    public function flysystem(array $value = []): \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\FlysystemConfig
+
+    /**
+     * @return \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\FlysystemConfig|$this
+     */
+    public function flysystem($value = [])
     {
-        if (null === $this->flysystem) {
+        if (!\is_array($value)) {
+            $this->_usedProperties['flysystem'] = true;
+            $this->flysystem = $value;
+
+            return $this;
+        }
+
+        if (!$this->flysystem instanceof \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\FlysystemConfig) {
+            $this->_usedProperties['flysystem'] = true;
             $this->flysystem = new \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\FlysystemConfig($value);
-        } elseif ([] !== $value) {
+        } elseif (0 < \func_num_args()) {
             throw new InvalidConfigurationException('The node created by "flysystem()" has already been initialized. You cannot pass values the second time you call flysystem().');
         }
-    
+
         return $this->flysystem;
     }
-    
+
     /**
      * @param ParamConfigurator|mixed $value
      * @return $this
      */
     public function glideUrl($value): self
     {
+        $this->_usedProperties['glideUrl'] = true;
         $this->glideUrl = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @param ParamConfigurator|mixed $value
      * @return $this
      */
     public function glideKey($value): self
     {
+        $this->_usedProperties['glideKey'] = true;
         $this->glideKey = $value;
-    
+
         return $this;
     }
-    
+
     public function plugins(string $name, array $value = []): \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\PluginsConfig
     {
         if (!isset($this->plugins[$name])) {
-            return $this->plugins[$name] = new \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\PluginsConfig($value);
+            $this->_usedProperties['plugins'] = true;
+            $this->plugins[$name] = new \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\PluginsConfig($value);
+        } elseif (1 < \func_num_args()) {
+            throw new InvalidConfigurationException('The node created by "plugins()" has already been initialized. You cannot pass values the second time you call plugins().');
         }
-        if ([] === $value) {
-            return $this->plugins[$name];
-        }
-    
-        throw new InvalidConfigurationException('The node created by "plugins()" has already been initialized. You cannot pass values the second time you call plugins().');
+
+        return $this->plugins[$name];
     }
-    
+
     public function driverOptions(string $name, array $value = []): \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\DriverOptionsConfig
     {
         if (!isset($this->driverOptions[$name])) {
-            return $this->driverOptions[$name] = new \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\DriverOptionsConfig($value);
+            $this->_usedProperties['driverOptions'] = true;
+            $this->driverOptions[$name] = new \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\DriverOptionsConfig($value);
+        } elseif (1 < \func_num_args()) {
+            throw new InvalidConfigurationException('The node created by "driverOptions()" has already been initialized. You cannot pass values the second time you call driverOptions().');
         }
-        if ([] === $value) {
-            return $this->driverOptions[$name];
-        }
-    
-        throw new InvalidConfigurationException('The node created by "driverOptions()" has already been initialized. You cannot pass values the second time you call driverOptions().');
+
+        return $this->driverOptions[$name];
     }
-    
-    public function dropbox2Settings(array $value = []): \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\Dropbox2SettingsConfig
+
+    /**
+     * @return \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\Dropbox2SettingsConfig|$this
+     */
+    public function dropbox2Settings($value = [])
     {
-        if (null === $this->dropbox2Settings) {
+        if (!\is_array($value)) {
+            $this->_usedProperties['dropbox2Settings'] = true;
+            $this->dropbox2Settings = $value;
+
+            return $this;
+        }
+
+        if (!$this->dropbox2Settings instanceof \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\Dropbox2SettingsConfig) {
+            $this->_usedProperties['dropbox2Settings'] = true;
             $this->dropbox2Settings = new \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\Dropbox2SettingsConfig($value);
-        } elseif ([] !== $value) {
+        } elseif (0 < \func_num_args()) {
             throw new InvalidConfigurationException('The node created by "dropbox2Settings()" has already been initialized. You cannot pass values the second time you call dropbox2Settings().');
         }
-    
+
         return $this->dropbox2Settings;
     }
-    
-    public function boxSettings(array $value = []): \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\BoxSettingsConfig
+
+    /**
+     * @return \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\BoxSettingsConfig|$this
+     */
+    public function boxSettings($value = [])
     {
-        if (null === $this->boxSettings) {
+        if (!\is_array($value)) {
+            $this->_usedProperties['boxSettings'] = true;
+            $this->boxSettings = $value;
+
+            return $this;
+        }
+
+        if (!$this->boxSettings instanceof \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\BoxSettingsConfig) {
+            $this->_usedProperties['boxSettings'] = true;
             $this->boxSettings = new \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\BoxSettingsConfig($value);
-        } elseif ([] !== $value) {
+        } elseif (0 < \func_num_args()) {
             throw new InvalidConfigurationException('The node created by "boxSettings()" has already been initialized. You cannot pass values the second time you call boxSettings().');
         }
-    
+
         return $this->boxSettings;
     }
-    
-    public function onedriveSettings(array $value = []): \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\OnedriveSettingsConfig
+
+    /**
+     * @return \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\OnedriveSettingsConfig|$this
+     */
+    public function onedriveSettings($value = [])
     {
-        if (null === $this->onedriveSettings) {
+        if (!\is_array($value)) {
+            $this->_usedProperties['onedriveSettings'] = true;
+            $this->onedriveSettings = $value;
+
+            return $this;
+        }
+
+        if (!$this->onedriveSettings instanceof \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\OnedriveSettingsConfig) {
+            $this->_usedProperties['onedriveSettings'] = true;
             $this->onedriveSettings = new \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\OnedriveSettingsConfig($value);
-        } elseif ([] !== $value) {
+        } elseif (0 < \func_num_args()) {
             throw new InvalidConfigurationException('The node created by "onedriveSettings()" has already been initialized. You cannot pass values the second time you call onedriveSettings().');
         }
-    
+
         return $this->onedriveSettings;
     }
-    
-    public function ftpSettings(array $value = []): \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\FtpSettingsConfig
+
+    /**
+     * @return \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\FtpSettingsConfig|$this
+     */
+    public function ftpSettings($value = [])
     {
-        if (null === $this->ftpSettings) {
+        if (!\is_array($value)) {
+            $this->_usedProperties['ftpSettings'] = true;
+            $this->ftpSettings = $value;
+
+            return $this;
+        }
+
+        if (!$this->ftpSettings instanceof \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\FtpSettingsConfig) {
+            $this->_usedProperties['ftpSettings'] = true;
             $this->ftpSettings = new \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\FtpSettingsConfig($value);
-        } elseif ([] !== $value) {
+        } elseif (0 < \func_num_args()) {
             throw new InvalidConfigurationException('The node created by "ftpSettings()" has already been initialized. You cannot pass values the second time you call ftpSettings().');
         }
-    
+
         return $this->ftpSettings;
     }
-    
-    public function mysqlSettings(array $value = []): \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\MysqlSettingsConfig
+
+    /**
+     * @return \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\MysqlSettingsConfig|$this
+     */
+    public function mysqlSettings($value = [])
     {
-        if (null === $this->mysqlSettings) {
+        if (!\is_array($value)) {
+            $this->_usedProperties['mysqlSettings'] = true;
+            $this->mysqlSettings = $value;
+
+            return $this;
+        }
+
+        if (!$this->mysqlSettings instanceof \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\MysqlSettingsConfig) {
+            $this->_usedProperties['mysqlSettings'] = true;
             $this->mysqlSettings = new \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\MysqlSettingsConfig($value);
-        } elseif ([] !== $value) {
+        } elseif (0 < \func_num_args()) {
             throw new InvalidConfigurationException('The node created by "mysqlSettings()" has already been initialized. You cannot pass values the second time you call mysqlSettings().');
         }
-    
+
         return $this->mysqlSettings;
     }
-    
+
     public function __construct(array $value = [])
     {
-    
-        if (isset($value['driver'])) {
+        if (array_key_exists('driver', $value)) {
+            $this->_usedProperties['driver'] = true;
             $this->driver = $value['driver'];
             unset($value['driver']);
         }
-    
-        if (isset($value['volume_id'])) {
+
+        if (array_key_exists('volume_id', $value)) {
+            $this->_usedProperties['volumeId'] = true;
             $this->volumeId = $value['volume_id'];
             unset($value['volume_id']);
         }
-    
-        if (isset($value['path'])) {
+
+        if (array_key_exists('path', $value)) {
+            $this->_usedProperties['path'] = true;
             $this->path = $value['path'];
             unset($value['path']);
         }
-    
-        if (isset($value['autoload'])) {
+
+        if (array_key_exists('autoload', $value)) {
+            $this->_usedProperties['autoload'] = true;
             $this->autoload = $value['autoload'];
             unset($value['autoload']);
         }
-    
-        if (isset($value['phash'])) {
+
+        if (array_key_exists('phash', $value)) {
+            $this->_usedProperties['phash'] = true;
             $this->phash = $value['phash'];
             unset($value['phash']);
         }
-    
-        if (isset($value['trash_hash'])) {
+
+        if (array_key_exists('trash_hash', $value)) {
+            $this->_usedProperties['trashHash'] = true;
             $this->trashHash = $value['trash_hash'];
             unset($value['trash_hash']);
         }
-    
-        if (isset($value['locale'])) {
+
+        if (array_key_exists('locale', $value)) {
+            $this->_usedProperties['locale'] = true;
             $this->locale = $value['locale'];
             unset($value['locale']);
         }
-    
-        if (isset($value['i18n_folder_name'])) {
+
+        if (array_key_exists('i18n_folder_name', $value)) {
+            $this->_usedProperties['i18nFolderName'] = true;
             $this->i18nFolderName = $value['i18n_folder_name'];
             unset($value['i18n_folder_name']);
         }
-    
-        if (isset($value['mime_detect'])) {
+
+        if (array_key_exists('mime_detect', $value)) {
+            $this->_usedProperties['mimeDetect'] = true;
             $this->mimeDetect = $value['mime_detect'];
             unset($value['mime_detect']);
         }
-    
-        if (isset($value['mimefile'])) {
+
+        if (array_key_exists('mimefile', $value)) {
+            $this->_usedProperties['mimefile'] = true;
             $this->mimefile = $value['mimefile'];
             unset($value['mimefile']);
         }
-    
-        if (isset($value['security_voter'])) {
+
+        if (array_key_exists('security_voter', $value)) {
+            $this->_usedProperties['securityVoter'] = true;
             $this->securityVoter = $value['security_voter'];
             unset($value['security_voter']);
         }
-    
-        if (isset($value['start_path'])) {
+
+        if (array_key_exists('start_path', $value)) {
+            $this->_usedProperties['startPath'] = true;
             $this->startPath = $value['start_path'];
             unset($value['start_path']);
         }
-    
-        if (isset($value['encoding'])) {
+
+        if (array_key_exists('encoding', $value)) {
+            $this->_usedProperties['encoding'] = true;
             $this->encoding = $value['encoding'];
             unset($value['encoding']);
         }
-    
-        if (isset($value['url'])) {
+
+        if (array_key_exists('url', $value)) {
+            $this->_usedProperties['url'] = true;
             $this->url = $value['url'];
             unset($value['url']);
         }
-    
-        if (isset($value['alias'])) {
+
+        if (array_key_exists('alias', $value)) {
+            $this->_usedProperties['alias'] = true;
             $this->alias = $value['alias'];
             unset($value['alias']);
         }
-    
-        if (isset($value['img_lib'])) {
+
+        if (array_key_exists('img_lib', $value)) {
+            $this->_usedProperties['imgLib'] = true;
             $this->imgLib = $value['img_lib'];
             unset($value['img_lib']);
         }
-    
-        if (isset($value['tmb_path'])) {
+
+        if (array_key_exists('tmb_path', $value)) {
+            $this->_usedProperties['tmbPath'] = true;
             $this->tmbPath = $value['tmb_path'];
             unset($value['tmb_path']);
         }
-    
-        if (isset($value['tmb_path_mode'])) {
+
+        if (array_key_exists('tmb_path_mode', $value)) {
+            $this->_usedProperties['tmbPathMode'] = true;
             $this->tmbPathMode = $value['tmb_path_mode'];
             unset($value['tmb_path_mode']);
         }
-    
-        if (isset($value['tmb_url'])) {
+
+        if (array_key_exists('tmb_url', $value)) {
+            $this->_usedProperties['tmbUrl'] = true;
             $this->tmbUrl = $value['tmb_url'];
             unset($value['tmb_url']);
         }
-    
-        if (isset($value['tmb_size'])) {
+
+        if (array_key_exists('tmb_size', $value)) {
+            $this->_usedProperties['tmbSize'] = true;
             $this->tmbSize = $value['tmb_size'];
             unset($value['tmb_size']);
         }
-    
-        if (isset($value['tmb_crop'])) {
+
+        if (array_key_exists('tmb_crop', $value)) {
+            $this->_usedProperties['tmbCrop'] = true;
             $this->tmbCrop = $value['tmb_crop'];
             unset($value['tmb_crop']);
         }
-    
-        if (isset($value['tmb_bg_color'])) {
+
+        if (array_key_exists('tmb_bg_color', $value)) {
+            $this->_usedProperties['tmbBgColor'] = true;
             $this->tmbBgColor = $value['tmb_bg_color'];
             unset($value['tmb_bg_color']);
         }
-    
-        if (isset($value['quarantine'])) {
+
+        if (array_key_exists('quarantine', $value)) {
+            $this->_usedProperties['quarantine'] = true;
             $this->quarantine = $value['quarantine'];
             unset($value['quarantine']);
         }
-    
-        if (isset($value['copy_overwrite'])) {
+
+        if (array_key_exists('copy_overwrite', $value)) {
+            $this->_usedProperties['copyOverwrite'] = true;
             $this->copyOverwrite = $value['copy_overwrite'];
             unset($value['copy_overwrite']);
         }
-    
-        if (isset($value['copy_join'])) {
+
+        if (array_key_exists('copy_join', $value)) {
+            $this->_usedProperties['copyJoin'] = true;
             $this->copyJoin = $value['copy_join'];
             unset($value['copy_join']);
         }
-    
-        if (isset($value['copy_from'])) {
+
+        if (array_key_exists('copy_from', $value)) {
+            $this->_usedProperties['copyFrom'] = true;
             $this->copyFrom = $value['copy_from'];
             unset($value['copy_from']);
         }
-    
-        if (isset($value['copy_to'])) {
+
+        if (array_key_exists('copy_to', $value)) {
+            $this->_usedProperties['copyTo'] = true;
             $this->copyTo = $value['copy_to'];
             unset($value['copy_to']);
         }
-    
-        if (isset($value['upload_overwrite'])) {
+
+        if (array_key_exists('upload_overwrite', $value)) {
+            $this->_usedProperties['uploadOverwrite'] = true;
             $this->uploadOverwrite = $value['upload_overwrite'];
             unset($value['upload_overwrite']);
         }
-    
-        if (isset($value['fileMode'])) {
+
+        if (array_key_exists('fileMode', $value)) {
+            $this->_usedProperties['fileMode'] = true;
             $this->fileMode = $value['fileMode'];
             unset($value['fileMode']);
         }
-    
-        if (isset($value['upload_allow'])) {
+
+        if (array_key_exists('upload_allow', $value)) {
+            $this->_usedProperties['uploadAllow'] = true;
             $this->uploadAllow = $value['upload_allow'];
             unset($value['upload_allow']);
         }
-    
-        if (isset($value['upload_deny'])) {
+
+        if (array_key_exists('upload_deny', $value)) {
+            $this->_usedProperties['uploadDeny'] = true;
             $this->uploadDeny = $value['upload_deny'];
             unset($value['upload_deny']);
         }
-    
-        if (isset($value['upload_order'])) {
+
+        if (array_key_exists('upload_order', $value)) {
+            $this->_usedProperties['uploadOrder'] = true;
             $this->uploadOrder = $value['upload_order'];
             unset($value['upload_order']);
         }
-    
-        if (isset($value['upload_max_size'])) {
+
+        if (array_key_exists('upload_max_size', $value)) {
+            $this->_usedProperties['uploadMaxSize'] = true;
             $this->uploadMaxSize = $value['upload_max_size'];
             unset($value['upload_max_size']);
         }
-    
-        if (isset($value['upload_max_conn'])) {
+
+        if (array_key_exists('upload_max_conn', $value)) {
+            $this->_usedProperties['uploadMaxConn'] = true;
             $this->uploadMaxConn = $value['upload_max_conn'];
             unset($value['upload_max_conn']);
         }
-    
-        if (isset($value['defaults'])) {
+
+        if (array_key_exists('defaults', $value)) {
+            $this->_usedProperties['defaults'] = true;
             $this->defaults = $value['defaults'];
             unset($value['defaults']);
         }
-    
-        if (isset($value['attributes'])) {
+
+        if (array_key_exists('attributes', $value)) {
+            $this->_usedProperties['attributes'] = true;
             $this->attributes = array_map(function ($v) { return new \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\AttributesConfig($v); }, $value['attributes']);
             unset($value['attributes']);
         }
-    
-        if (isset($value['accepted_name'])) {
+
+        if (array_key_exists('accepted_name', $value)) {
+            $this->_usedProperties['acceptedName'] = true;
             $this->acceptedName = $value['accepted_name'];
             unset($value['accepted_name']);
         }
-    
-        if (isset($value['show_hidden'])) {
+
+        if (array_key_exists('show_hidden', $value)) {
+            $this->_usedProperties['showHidden'] = true;
             $this->showHidden = $value['show_hidden'];
             unset($value['show_hidden']);
         }
-    
-        if (isset($value['disabled_commands'])) {
+
+        if (array_key_exists('disabled_commands', $value)) {
+            $this->_usedProperties['disabledCommands'] = true;
             $this->disabledCommands = $value['disabled_commands'];
             unset($value['disabled_commands']);
         }
-    
-        if (isset($value['tree_deep'])) {
+
+        if (array_key_exists('tree_deep', $value)) {
+            $this->_usedProperties['treeDeep'] = true;
             $this->treeDeep = $value['tree_deep'];
             unset($value['tree_deep']);
         }
-    
-        if (isset($value['check_subfolders'])) {
+
+        if (array_key_exists('check_subfolders', $value)) {
+            $this->_usedProperties['checkSubfolders'] = true;
             $this->checkSubfolders = $value['check_subfolders'];
             unset($value['check_subfolders']);
         }
-    
-        if (isset($value['separator'])) {
+
+        if (array_key_exists('separator', $value)) {
+            $this->_usedProperties['separator'] = true;
             $this->separator = $value['separator'];
             unset($value['separator']);
         }
-    
-        if (isset($value['date_format'])) {
+
+        if (array_key_exists('date_format', $value)) {
+            $this->_usedProperties['dateFormat'] = true;
             $this->dateFormat = $value['date_format'];
             unset($value['date_format']);
         }
-    
-        if (isset($value['time_format'])) {
+
+        if (array_key_exists('time_format', $value)) {
+            $this->_usedProperties['timeFormat'] = true;
             $this->timeFormat = $value['time_format'];
             unset($value['time_format']);
         }
-    
-        if (isset($value['archive_mimes'])) {
+
+        if (array_key_exists('archive_mimes', $value)) {
+            $this->_usedProperties['archiveMimes'] = true;
             $this->archiveMimes = $value['archive_mimes'];
             unset($value['archive_mimes']);
         }
-    
-        if (isset($value['archivers'])) {
-            $this->archivers = new \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\ArchiversConfig($value['archivers']);
+
+        if (array_key_exists('archivers', $value)) {
+            $this->_usedProperties['archivers'] = true;
+            $this->archivers = \is_array($value['archivers']) ? new \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\ArchiversConfig($value['archivers']) : $value['archivers'];
             unset($value['archivers']);
         }
-    
-        if (isset($value['flysystem'])) {
-            $this->flysystem = new \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\FlysystemConfig($value['flysystem']);
+
+        if (array_key_exists('flysystem', $value)) {
+            $this->_usedProperties['flysystem'] = true;
+            $this->flysystem = \is_array($value['flysystem']) ? new \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\FlysystemConfig($value['flysystem']) : $value['flysystem'];
             unset($value['flysystem']);
         }
-    
-        if (isset($value['glide_url'])) {
+
+        if (array_key_exists('glide_url', $value)) {
+            $this->_usedProperties['glideUrl'] = true;
             $this->glideUrl = $value['glide_url'];
             unset($value['glide_url']);
         }
-    
-        if (isset($value['glide_key'])) {
+
+        if (array_key_exists('glide_key', $value)) {
+            $this->_usedProperties['glideKey'] = true;
             $this->glideKey = $value['glide_key'];
             unset($value['glide_key']);
         }
-    
-        if (isset($value['plugins'])) {
+
+        if (array_key_exists('plugins', $value)) {
+            $this->_usedProperties['plugins'] = true;
             $this->plugins = array_map(function ($v) { return new \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\PluginsConfig($v); }, $value['plugins']);
             unset($value['plugins']);
         }
-    
-        if (isset($value['driver_options'])) {
+
+        if (array_key_exists('driver_options', $value)) {
+            $this->_usedProperties['driverOptions'] = true;
             $this->driverOptions = array_map(function ($v) { return new \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\DriverOptionsConfig($v); }, $value['driver_options']);
             unset($value['driver_options']);
         }
-    
-        if (isset($value['dropbox2_settings'])) {
-            $this->dropbox2Settings = new \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\Dropbox2SettingsConfig($value['dropbox2_settings']);
+
+        if (array_key_exists('dropbox2_settings', $value)) {
+            $this->_usedProperties['dropbox2Settings'] = true;
+            $this->dropbox2Settings = \is_array($value['dropbox2_settings']) ? new \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\Dropbox2SettingsConfig($value['dropbox2_settings']) : $value['dropbox2_settings'];
             unset($value['dropbox2_settings']);
         }
-    
-        if (isset($value['box_settings'])) {
-            $this->boxSettings = new \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\BoxSettingsConfig($value['box_settings']);
+
+        if (array_key_exists('box_settings', $value)) {
+            $this->_usedProperties['boxSettings'] = true;
+            $this->boxSettings = \is_array($value['box_settings']) ? new \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\BoxSettingsConfig($value['box_settings']) : $value['box_settings'];
             unset($value['box_settings']);
         }
-    
-        if (isset($value['onedrive_settings'])) {
-            $this->onedriveSettings = new \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\OnedriveSettingsConfig($value['onedrive_settings']);
+
+        if (array_key_exists('onedrive_settings', $value)) {
+            $this->_usedProperties['onedriveSettings'] = true;
+            $this->onedriveSettings = \is_array($value['onedrive_settings']) ? new \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\OnedriveSettingsConfig($value['onedrive_settings']) : $value['onedrive_settings'];
             unset($value['onedrive_settings']);
         }
-    
-        if (isset($value['ftp_settings'])) {
-            $this->ftpSettings = new \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\FtpSettingsConfig($value['ftp_settings']);
+
+        if (array_key_exists('ftp_settings', $value)) {
+            $this->_usedProperties['ftpSettings'] = true;
+            $this->ftpSettings = \is_array($value['ftp_settings']) ? new \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\FtpSettingsConfig($value['ftp_settings']) : $value['ftp_settings'];
             unset($value['ftp_settings']);
         }
-    
-        if (isset($value['mysql_settings'])) {
-            $this->mysqlSettings = new \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\MysqlSettingsConfig($value['mysql_settings']);
+
+        if (array_key_exists('mysql_settings', $value)) {
+            $this->_usedProperties['mysqlSettings'] = true;
+            $this->mysqlSettings = \is_array($value['mysql_settings']) ? new \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\MysqlSettingsConfig($value['mysql_settings']) : $value['mysql_settings'];
             unset($value['mysql_settings']);
         }
-    
+
         if ([] !== $value) {
             throw new InvalidConfigurationException(sprintf('The following keys are not supported by "%s": ', __CLASS__).implode(', ', array_keys($value)));
         }
     }
-    
+
     public function toArray(): array
     {
         $output = [];
-        if (null !== $this->driver) {
+        if (isset($this->_usedProperties['driver'])) {
             $output['driver'] = $this->driver;
         }
-        if (null !== $this->volumeId) {
+        if (isset($this->_usedProperties['volumeId'])) {
             $output['volume_id'] = $this->volumeId;
         }
-        if (null !== $this->path) {
+        if (isset($this->_usedProperties['path'])) {
             $output['path'] = $this->path;
         }
-        if (null !== $this->autoload) {
+        if (isset($this->_usedProperties['autoload'])) {
             $output['autoload'] = $this->autoload;
         }
-        if (null !== $this->phash) {
+        if (isset($this->_usedProperties['phash'])) {
             $output['phash'] = $this->phash;
         }
-        if (null !== $this->trashHash) {
+        if (isset($this->_usedProperties['trashHash'])) {
             $output['trash_hash'] = $this->trashHash;
         }
-        if (null !== $this->locale) {
+        if (isset($this->_usedProperties['locale'])) {
             $output['locale'] = $this->locale;
         }
-        if (null !== $this->i18nFolderName) {
+        if (isset($this->_usedProperties['i18nFolderName'])) {
             $output['i18n_folder_name'] = $this->i18nFolderName;
         }
-        if (null !== $this->mimeDetect) {
+        if (isset($this->_usedProperties['mimeDetect'])) {
             $output['mime_detect'] = $this->mimeDetect;
         }
-        if (null !== $this->mimefile) {
+        if (isset($this->_usedProperties['mimefile'])) {
             $output['mimefile'] = $this->mimefile;
         }
-        if (null !== $this->securityVoter) {
+        if (isset($this->_usedProperties['securityVoter'])) {
             $output['security_voter'] = $this->securityVoter;
         }
-        if (null !== $this->startPath) {
+        if (isset($this->_usedProperties['startPath'])) {
             $output['start_path'] = $this->startPath;
         }
-        if (null !== $this->encoding) {
+        if (isset($this->_usedProperties['encoding'])) {
             $output['encoding'] = $this->encoding;
         }
-        if (null !== $this->url) {
+        if (isset($this->_usedProperties['url'])) {
             $output['url'] = $this->url;
         }
-        if (null !== $this->alias) {
+        if (isset($this->_usedProperties['alias'])) {
             $output['alias'] = $this->alias;
         }
-        if (null !== $this->imgLib) {
+        if (isset($this->_usedProperties['imgLib'])) {
             $output['img_lib'] = $this->imgLib;
         }
-        if (null !== $this->tmbPath) {
+        if (isset($this->_usedProperties['tmbPath'])) {
             $output['tmb_path'] = $this->tmbPath;
         }
-        if (null !== $this->tmbPathMode) {
+        if (isset($this->_usedProperties['tmbPathMode'])) {
             $output['tmb_path_mode'] = $this->tmbPathMode;
         }
-        if (null !== $this->tmbUrl) {
+        if (isset($this->_usedProperties['tmbUrl'])) {
             $output['tmb_url'] = $this->tmbUrl;
         }
-        if (null !== $this->tmbSize) {
+        if (isset($this->_usedProperties['tmbSize'])) {
             $output['tmb_size'] = $this->tmbSize;
         }
-        if (null !== $this->tmbCrop) {
+        if (isset($this->_usedProperties['tmbCrop'])) {
             $output['tmb_crop'] = $this->tmbCrop;
         }
-        if (null !== $this->tmbBgColor) {
+        if (isset($this->_usedProperties['tmbBgColor'])) {
             $output['tmb_bg_color'] = $this->tmbBgColor;
         }
-        if (null !== $this->quarantine) {
+        if (isset($this->_usedProperties['quarantine'])) {
             $output['quarantine'] = $this->quarantine;
         }
-        if (null !== $this->copyOverwrite) {
+        if (isset($this->_usedProperties['copyOverwrite'])) {
             $output['copy_overwrite'] = $this->copyOverwrite;
         }
-        if (null !== $this->copyJoin) {
+        if (isset($this->_usedProperties['copyJoin'])) {
             $output['copy_join'] = $this->copyJoin;
         }
-        if (null !== $this->copyFrom) {
+        if (isset($this->_usedProperties['copyFrom'])) {
             $output['copy_from'] = $this->copyFrom;
         }
-        if (null !== $this->copyTo) {
+        if (isset($this->_usedProperties['copyTo'])) {
             $output['copy_to'] = $this->copyTo;
         }
-        if (null !== $this->uploadOverwrite) {
+        if (isset($this->_usedProperties['uploadOverwrite'])) {
             $output['upload_overwrite'] = $this->uploadOverwrite;
         }
-        if (null !== $this->fileMode) {
+        if (isset($this->_usedProperties['fileMode'])) {
             $output['fileMode'] = $this->fileMode;
         }
-        if (null !== $this->uploadAllow) {
+        if (isset($this->_usedProperties['uploadAllow'])) {
             $output['upload_allow'] = $this->uploadAllow;
         }
-        if (null !== $this->uploadDeny) {
+        if (isset($this->_usedProperties['uploadDeny'])) {
             $output['upload_deny'] = $this->uploadDeny;
         }
-        if (null !== $this->uploadOrder) {
+        if (isset($this->_usedProperties['uploadOrder'])) {
             $output['upload_order'] = $this->uploadOrder;
         }
-        if (null !== $this->uploadMaxSize) {
+        if (isset($this->_usedProperties['uploadMaxSize'])) {
             $output['upload_max_size'] = $this->uploadMaxSize;
         }
-        if (null !== $this->uploadMaxConn) {
+        if (isset($this->_usedProperties['uploadMaxConn'])) {
             $output['upload_max_conn'] = $this->uploadMaxConn;
         }
-        if (null !== $this->defaults) {
+        if (isset($this->_usedProperties['defaults'])) {
             $output['defaults'] = $this->defaults;
         }
-        if (null !== $this->attributes) {
+        if (isset($this->_usedProperties['attributes'])) {
             $output['attributes'] = array_map(function ($v) { return $v->toArray(); }, $this->attributes);
         }
-        if (null !== $this->acceptedName) {
+        if (isset($this->_usedProperties['acceptedName'])) {
             $output['accepted_name'] = $this->acceptedName;
         }
-        if (null !== $this->showHidden) {
+        if (isset($this->_usedProperties['showHidden'])) {
             $output['show_hidden'] = $this->showHidden;
         }
-        if (null !== $this->disabledCommands) {
+        if (isset($this->_usedProperties['disabledCommands'])) {
             $output['disabled_commands'] = $this->disabledCommands;
         }
-        if (null !== $this->treeDeep) {
+        if (isset($this->_usedProperties['treeDeep'])) {
             $output['tree_deep'] = $this->treeDeep;
         }
-        if (null !== $this->checkSubfolders) {
+        if (isset($this->_usedProperties['checkSubfolders'])) {
             $output['check_subfolders'] = $this->checkSubfolders;
         }
-        if (null !== $this->separator) {
+        if (isset($this->_usedProperties['separator'])) {
             $output['separator'] = $this->separator;
         }
-        if (null !== $this->dateFormat) {
+        if (isset($this->_usedProperties['dateFormat'])) {
             $output['date_format'] = $this->dateFormat;
         }
-        if (null !== $this->timeFormat) {
+        if (isset($this->_usedProperties['timeFormat'])) {
             $output['time_format'] = $this->timeFormat;
         }
-        if (null !== $this->archiveMimes) {
+        if (isset($this->_usedProperties['archiveMimes'])) {
             $output['archive_mimes'] = $this->archiveMimes;
         }
-        if (null !== $this->archivers) {
-            $output['archivers'] = $this->archivers->toArray();
+        if (isset($this->_usedProperties['archivers'])) {
+            $output['archivers'] = $this->archivers instanceof \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\ArchiversConfig ? $this->archivers->toArray() : $this->archivers;
         }
-        if (null !== $this->flysystem) {
-            $output['flysystem'] = $this->flysystem->toArray();
+        if (isset($this->_usedProperties['flysystem'])) {
+            $output['flysystem'] = $this->flysystem instanceof \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\FlysystemConfig ? $this->flysystem->toArray() : $this->flysystem;
         }
-        if (null !== $this->glideUrl) {
+        if (isset($this->_usedProperties['glideUrl'])) {
             $output['glide_url'] = $this->glideUrl;
         }
-        if (null !== $this->glideKey) {
+        if (isset($this->_usedProperties['glideKey'])) {
             $output['glide_key'] = $this->glideKey;
         }
-        if (null !== $this->plugins) {
+        if (isset($this->_usedProperties['plugins'])) {
             $output['plugins'] = array_map(function ($v) { return $v->toArray(); }, $this->plugins);
         }
-        if (null !== $this->driverOptions) {
+        if (isset($this->_usedProperties['driverOptions'])) {
             $output['driver_options'] = array_map(function ($v) { return $v->toArray(); }, $this->driverOptions);
         }
-        if (null !== $this->dropbox2Settings) {
-            $output['dropbox2_settings'] = $this->dropbox2Settings->toArray();
+        if (isset($this->_usedProperties['dropbox2Settings'])) {
+            $output['dropbox2_settings'] = $this->dropbox2Settings instanceof \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\Dropbox2SettingsConfig ? $this->dropbox2Settings->toArray() : $this->dropbox2Settings;
         }
-        if (null !== $this->boxSettings) {
-            $output['box_settings'] = $this->boxSettings->toArray();
+        if (isset($this->_usedProperties['boxSettings'])) {
+            $output['box_settings'] = $this->boxSettings instanceof \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\BoxSettingsConfig ? $this->boxSettings->toArray() : $this->boxSettings;
         }
-        if (null !== $this->onedriveSettings) {
-            $output['onedrive_settings'] = $this->onedriveSettings->toArray();
+        if (isset($this->_usedProperties['onedriveSettings'])) {
+            $output['onedrive_settings'] = $this->onedriveSettings instanceof \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\OnedriveSettingsConfig ? $this->onedriveSettings->toArray() : $this->onedriveSettings;
         }
-        if (null !== $this->ftpSettings) {
-            $output['ftp_settings'] = $this->ftpSettings->toArray();
+        if (isset($this->_usedProperties['ftpSettings'])) {
+            $output['ftp_settings'] = $this->ftpSettings instanceof \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\FtpSettingsConfig ? $this->ftpSettings->toArray() : $this->ftpSettings;
         }
-        if (null !== $this->mysqlSettings) {
-            $output['mysql_settings'] = $this->mysqlSettings->toArray();
+        if (isset($this->_usedProperties['mysqlSettings'])) {
+            $output['mysql_settings'] = $this->mysqlSettings instanceof \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\MysqlSettingsConfig ? $this->mysqlSettings->toArray() : $this->mysqlSettings;
         }
-    
+
         return $output;
     }
 

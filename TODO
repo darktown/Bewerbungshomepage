@@ -9,8 +9,8 @@ Todo:
       ✔ Link -> string @done(23-06-11 17:43)
       ✔ image -> text @done(23-06-11 17:43)
   ✔ crud im EasyAdmin anlegen @started(23-06-26 18:49) @done(23-06-26 19:07) @lasted(18m53s)
-  ☐ Einbinden auf den Onepager
-    ☐ Titel des Projektes und Vorschaubild auf der seite anzeigen lassen
+  ✔ Einbinden auf den Onepager @done(23-11-19 12:56)
+    ✔ Titel des Projektes und Vorschaubild auf der seite anzeigen lassen @done(23-11-19 12:56)
   ☐ Projekte als Hover laden mit Link zum Github
     ☐ Inforamtionen zum Projekt bereitstellen
       ☐ Name zum Projekt

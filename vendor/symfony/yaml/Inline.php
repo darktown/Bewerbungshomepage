@@ -50,9 +50,9 @@ class Inline
     /**
      * Converts a YAML string to a PHP value.
      *
-     * @param string $value      A YAML string
-     * @param int    $flags      A bit field of Yaml::PARSE_* constants to customize the YAML parser behavior
-     * @param array  $references Mapping of variable names to values
+     * @param string|null $value      A YAML string
+     * @param int         $flags      A bit field of Yaml::PARSE_* constants to customize the YAML parser behavior
+     * @param array       $references Mapping of variable names to values
      *
      * @return mixed
      *
@@ -60,6 +60,10 @@ class Inline
      */
     public static function parse(string $value = null, int $flags = 0, array &$references = [])
     {
+        if (null === $value) {
+            return '';
+        }
+
         self::initialize($flags);
 
         $value = trim($value);
@@ -527,7 +531,7 @@ class Inline
                         if ('<<' === $key) {
                             $output += $value;
                         } elseif ($allowOverwrite || !isset($output[$key])) {
-                            if (!$isValueQuoted && \is_string($value) && '' !== $value && '&' === $value[0] && Parser::preg_match(Parser::REFERENCE_PATTERN, $value, $matches)) {
+                            if (!$isValueQuoted && \is_string($value) && '' !== $value && '&' === $value[0] && !self::isBinaryString($value) && Parser::preg_match(Parser::REFERENCE_PATTERN, $value, $matches)) {
                                 $references[$matches['ref']] = $matches['value'];
                                 $value = $matches['value'];
                             }

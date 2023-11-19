@@ -2,13 +2,11 @@
 
 namespace Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig;
 
-
 use Symfony\Component\Config\Loader\ParamConfigurator;
 use Symfony\Component\Config\Definition\Exception\InvalidConfigurationException;
 
-
 /**
- * This class is automatically generated to help creating config.
+ * This class is automatically generated to help in creating a config.
  */
 class MysqlSettingsConfig 
 {
@@ -24,7 +22,8 @@ class MysqlSettingsConfig
     private $tmpPath;
     private $rootCssClass;
     private $noSessionCache;
-    
+    private $_usedProperties = [];
+
     /**
      * @default false
      * @param ParamConfigurator|bool $value
@@ -32,11 +31,12 @@ class MysqlSettingsConfig
      */
     public function enabled($value): self
     {
+        $this->_usedProperties['enabled'] = true;
         $this->enabled = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default null
      * @param ParamConfigurator|mixed $value
@@ -44,11 +44,12 @@ class MysqlSettingsConfig
      */
     public function host($value): self
     {
+        $this->_usedProperties['host'] = true;
         $this->host = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default null
      * @param ParamConfigurator|mixed $value
@@ -56,11 +57,12 @@ class MysqlSettingsConfig
      */
     public function user($value): self
     {
+        $this->_usedProperties['user'] = true;
         $this->user = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default null
      * @param ParamConfigurator|mixed $value
@@ -68,11 +70,12 @@ class MysqlSettingsConfig
      */
     public function pass($value): self
     {
+        $this->_usedProperties['pass'] = true;
         $this->pass = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default null
      * @param ParamConfigurator|mixed $value
@@ -80,11 +83,12 @@ class MysqlSettingsConfig
      */
     public function db($value): self
     {
+        $this->_usedProperties['db'] = true;
         $this->db = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default null
      * @param ParamConfigurator|mixed $value
@@ -92,11 +96,12 @@ class MysqlSettingsConfig
      */
     public function port($value): self
     {
+        $this->_usedProperties['port'] = true;
         $this->port = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default null
      * @param ParamConfigurator|mixed $value
@@ -104,11 +109,12 @@ class MysqlSettingsConfig
      */
     public function socket($value): self
     {
+        $this->_usedProperties['socket'] = true;
         $this->socket = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default 'elfinder_file'
      * @param ParamConfigurator|mixed $value
@@ -116,33 +122,36 @@ class MysqlSettingsConfig
      */
     public function filesTable($value): self
     {
+        $this->_usedProperties['filesTable'] = true;
         $this->filesTable = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @param ParamConfigurator|mixed $value
      * @return $this
      */
     public function tmbPath($value): self
     {
+        $this->_usedProperties['tmbPath'] = true;
         $this->tmbPath = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @param ParamConfigurator|mixed $value
      * @return $this
      */
     public function tmpPath($value): self
     {
+        $this->_usedProperties['tmpPath'] = true;
         $this->tmpPath = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default 'elfinder-navbar-root-sql'
      * @param ParamConfigurator|mixed $value
@@ -150,11 +159,12 @@ class MysqlSettingsConfig
      */
     public function rootCssClass($value): self
     {
+        $this->_usedProperties['rootCssClass'] = true;
         $this->rootCssClass = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default 'hasdirs'
      * @param ParamConfigurator|mixed $value
@@ -162,119 +172,131 @@ class MysqlSettingsConfig
      */
     public function noSessionCache($value): self
     {
+        $this->_usedProperties['noSessionCache'] = true;
         $this->noSessionCache = $value;
-    
+
         return $this;
     }
-    
+
     public function __construct(array $value = [])
     {
-    
-        if (isset($value['enabled'])) {
+        if (array_key_exists('enabled', $value)) {
+            $this->_usedProperties['enabled'] = true;
             $this->enabled = $value['enabled'];
             unset($value['enabled']);
         }
-    
-        if (isset($value['host'])) {
+
+        if (array_key_exists('host', $value)) {
+            $this->_usedProperties['host'] = true;
             $this->host = $value['host'];
             unset($value['host']);
         }
-    
-        if (isset($value['user'])) {
+
+        if (array_key_exists('user', $value)) {
+            $this->_usedProperties['user'] = true;
             $this->user = $value['user'];
             unset($value['user']);
         }
-    
-        if (isset($value['pass'])) {
+
+        if (array_key_exists('pass', $value)) {
+            $this->_usedProperties['pass'] = true;
             $this->pass = $value['pass'];
             unset($value['pass']);
         }
-    
-        if (isset($value['db'])) {
+
+        if (array_key_exists('db', $value)) {
+            $this->_usedProperties['db'] = true;
             $this->db = $value['db'];
             unset($value['db']);
         }
-    
-        if (isset($value['port'])) {
+
+        if (array_key_exists('port', $value)) {
+            $this->_usedProperties['port'] = true;
             $this->port = $value['port'];
             unset($value['port']);
         }
-    
-        if (isset($value['socket'])) {
+
+        if (array_key_exists('socket', $value)) {
+            $this->_usedProperties['socket'] = true;
             $this->socket = $value['socket'];
             unset($value['socket']);
         }
-    
-        if (isset($value['files_table'])) {
+
+        if (array_key_exists('files_table', $value)) {
+            $this->_usedProperties['filesTable'] = true;
             $this->filesTable = $value['files_table'];
             unset($value['files_table']);
         }
-    
-        if (isset($value['tmbPath'])) {
+
+        if (array_key_exists('tmbPath', $value)) {
+            $this->_usedProperties['tmbPath'] = true;
             $this->tmbPath = $value['tmbPath'];
             unset($value['tmbPath']);
         }
-    
-        if (isset($value['tmpPath'])) {
+
+        if (array_key_exists('tmpPath', $value)) {
+            $this->_usedProperties['tmpPath'] = true;
             $this->tmpPath = $value['tmpPath'];
             unset($value['tmpPath']);
         }
-    
-        if (isset($value['rootCssClass'])) {
+
+        if (array_key_exists('rootCssClass', $value)) {
+            $this->_usedProperties['rootCssClass'] = true;
             $this->rootCssClass = $value['rootCssClass'];
             unset($value['rootCssClass']);
         }
-    
-        if (isset($value['noSessionCache'])) {
+
+        if (array_key_exists('noSessionCache', $value)) {
+            $this->_usedProperties['noSessionCache'] = true;
             $this->noSessionCache = $value['noSessionCache'];
             unset($value['noSessionCache']);
         }
-    
+
         if ([] !== $value) {
             throw new InvalidConfigurationException(sprintf('The following keys are not supported by "%s": ', __CLASS__).implode(', ', array_keys($value)));
         }
     }
-    
+
     public function toArray(): array
     {
         $output = [];
-        if (null !== $this->enabled) {
+        if (isset($this->_usedProperties['enabled'])) {
             $output['enabled'] = $this->enabled;
         }
-        if (null !== $this->host) {
+        if (isset($this->_usedProperties['host'])) {
             $output['host'] = $this->host;
         }
-        if (null !== $this->user) {
+        if (isset($this->_usedProperties['user'])) {
             $output['user'] = $this->user;
         }
-        if (null !== $this->pass) {
+        if (isset($this->_usedProperties['pass'])) {
             $output['pass'] = $this->pass;
         }
-        if (null !== $this->db) {
+        if (isset($this->_usedProperties['db'])) {
             $output['db'] = $this->db;
         }
-        if (null !== $this->port) {
+        if (isset($this->_usedProperties['port'])) {
             $output['port'] = $this->port;
         }
-        if (null !== $this->socket) {
+        if (isset($this->_usedProperties['socket'])) {
             $output['socket'] = $this->socket;
         }
-        if (null !== $this->filesTable) {
+        if (isset($this->_usedProperties['filesTable'])) {
             $output['files_table'] = $this->filesTable;
         }
-        if (null !== $this->tmbPath) {
+        if (isset($this->_usedProperties['tmbPath'])) {
             $output['tmbPath'] = $this->tmbPath;
         }
-        if (null !== $this->tmpPath) {
+        if (isset($this->_usedProperties['tmpPath'])) {
             $output['tmpPath'] = $this->tmpPath;
         }
-        if (null !== $this->rootCssClass) {
+        if (isset($this->_usedProperties['rootCssClass'])) {
             $output['rootCssClass'] = $this->rootCssClass;
         }
-        if (null !== $this->noSessionCache) {
+        if (isset($this->_usedProperties['noSessionCache'])) {
             $output['noSessionCache'] = $this->noSessionCache;
         }
-    
+
         return $output;
     }
 

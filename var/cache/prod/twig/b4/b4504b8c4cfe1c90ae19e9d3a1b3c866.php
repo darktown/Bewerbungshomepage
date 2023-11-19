@@ -59,10 +59,7 @@ class __TwigTemplate_3c855e6ef15a9e6059fa0e4d114c67ff extends Template
         // line 19
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
         echo "\">Rene Pirzkall</a> | 
-                    <a class=\"no-line\" href=\"";
-        // line 20
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("impressum");
-        echo "\">Impressum</a>
+                    <a href=\"\" data-toggle=\"modal\" data-target=\"#myModal\" class=\"page-scroll test no-line\">Impressum</a>
                     </p>
                 </div> <!-- end of col -->
             </div> <!-- enf of row -->
@@ -111,7 +108,7 @@ class __TwigTemplate_3c855e6ef15a9e6059fa0e4d114c67ff extends Template
 
     public function getDebugInfo()
     {
-        return array (  97 => 41,  93 => 40,  89 => 39,  85 => 38,  64 => 20,  60 => 19,  44 => 6,  37 => 1,);
+        return array (  94 => 41,  90 => 40,  86 => 39,  82 => 38,  60 => 19,  44 => 6,  37 => 1,);
     }
 
     public function getSourceContext()

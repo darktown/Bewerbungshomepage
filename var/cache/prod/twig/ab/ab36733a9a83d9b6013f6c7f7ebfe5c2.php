@@ -70,13 +70,16 @@ class __TwigTemplate_00623e56894dfd9b514fb8e33d66b16a extends Template
           <a class=\"nav-link page-scroll test\" href=\"#skills\">Skills</a>
         </li>
         <li class=\"nav-item\">
+          <a href=\"\" data-toggle=\"modal\" data-target=\"#myModal_pro\" class=\"nav-link page-scroll test\" > Projekte </a>
+        </li>
+        <li class=\"nav-item\">
           <a href=\"\" data-toggle=\"modal\" data-target=\"#myModal\" class=\"nav-link page-scroll test\" > Impressum </a>
         </li>
         ";
-        // line 39
+        // line 42
         echo "      </ul>
       ";
-        // line 40
+        // line 43
         echo $this->env->getRuntime('Symfony\Bridge\Twig\Extension\HttpKernelRuntime')->renderFragment(Symfony\Bridge\Twig\Extension\HttpKernelExtension::controller("App\\Controller\\SocialController::social"));
         echo "
     </div>
@@ -101,7 +104,7 @@ class __TwigTemplate_00623e56894dfd9b514fb8e33d66b16a extends Template
 
     public function getDebugInfo()
     {
-        return array (  80 => 40,  77 => 39,  52 => 12,  43 => 5,  37 => 1,);
+        return array (  83 => 43,  80 => 42,  52 => 12,  43 => 5,  37 => 1,);
     }
 
     public function getSourceContext()

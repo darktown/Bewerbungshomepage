@@ -2,13 +2,11 @@
 
 namespace Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig;
 
-
 use Symfony\Component\Config\Loader\ParamConfigurator;
 use Symfony\Component\Config\Definition\Exception\InvalidConfigurationException;
 
-
 /**
- * This class is automatically generated to help creating config.
+ * This class is automatically generated to help in creating a config.
  */
 class AttributesConfig 
 {
@@ -17,7 +15,8 @@ class AttributesConfig
     private $write;
     private $locked;
     private $hidden;
-    
+    private $_usedProperties = [];
+
     /**
      * @default null
      * @param ParamConfigurator|mixed $value
@@ -25,11 +24,12 @@ class AttributesConfig
      */
     public function pattern($value): self
     {
+        $this->_usedProperties['pattern'] = true;
         $this->pattern = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default true
      * @param ParamConfigurator|mixed $value
@@ -37,11 +37,12 @@ class AttributesConfig
      */
     public function read($value): self
     {
+        $this->_usedProperties['read'] = true;
         $this->read = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default true
      * @param ParamConfigurator|mixed $value
@@ -49,11 +50,12 @@ class AttributesConfig
      */
     public function write($value): self
     {
+        $this->_usedProperties['write'] = true;
         $this->write = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default false
      * @param ParamConfigurator|mixed $value
@@ -61,11 +63,12 @@ class AttributesConfig
      */
     public function locked($value): self
     {
+        $this->_usedProperties['locked'] = true;
         $this->locked = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default false
      * @param ParamConfigurator|mixed $value
@@ -73,63 +76,68 @@ class AttributesConfig
      */
     public function hidden($value): self
     {
+        $this->_usedProperties['hidden'] = true;
         $this->hidden = $value;
-    
+
         return $this;
     }
-    
+
     public function __construct(array $value = [])
     {
-    
-        if (isset($value['pattern'])) {
+        if (array_key_exists('pattern', $value)) {
+            $this->_usedProperties['pattern'] = true;
             $this->pattern = $value['pattern'];
             unset($value['pattern']);
         }
-    
-        if (isset($value['read'])) {
+
+        if (array_key_exists('read', $value)) {
+            $this->_usedProperties['read'] = true;
             $this->read = $value['read'];
             unset($value['read']);
         }
-    
-        if (isset($value['write'])) {
+
+        if (array_key_exists('write', $value)) {
+            $this->_usedProperties['write'] = true;
             $this->write = $value['write'];
             unset($value['write']);
         }
-    
-        if (isset($value['locked'])) {
+
+        if (array_key_exists('locked', $value)) {
+            $this->_usedProperties['locked'] = true;
             $this->locked = $value['locked'];
             unset($value['locked']);
         }
-    
-        if (isset($value['hidden'])) {
+
+        if (array_key_exists('hidden', $value)) {
+            $this->_usedProperties['hidden'] = true;
             $this->hidden = $value['hidden'];
             unset($value['hidden']);
         }
-    
+
         if ([] !== $value) {
             throw new InvalidConfigurationException(sprintf('The following keys are not supported by "%s": ', __CLASS__).implode(', ', array_keys($value)));
         }
     }
-    
+
     public function toArray(): array
     {
         $output = [];
-        if (null !== $this->pattern) {
+        if (isset($this->_usedProperties['pattern'])) {
             $output['pattern'] = $this->pattern;
         }
-        if (null !== $this->read) {
+        if (isset($this->_usedProperties['read'])) {
             $output['read'] = $this->read;
         }
-        if (null !== $this->write) {
+        if (isset($this->_usedProperties['write'])) {
             $output['write'] = $this->write;
         }
-        if (null !== $this->locked) {
+        if (isset($this->_usedProperties['locked'])) {
             $output['locked'] = $this->locked;
         }
-        if (null !== $this->hidden) {
+        if (isset($this->_usedProperties['hidden'])) {
             $output['hidden'] = $this->hidden;
         }
-    
+
         return $output;
     }
 

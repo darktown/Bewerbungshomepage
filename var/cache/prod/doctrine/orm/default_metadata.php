@@ -11,10 +11,11 @@ return [[
 'App__Entity__Impressum__CLASSMETADATA__' => 4,
 'App__Entity__Lebenslauf__CLASSMETADATA__' => 5,
 'App__Entity__Programm__CLASSMETADATA__' => 6,
-'App__Entity__Skills__CLASSMETADATA__' => 7,
-'App__Entity__Social__CLASSMETADATA__' => 8,
-'App__Entity__Texte__CLASSMETADATA__' => 9,
-'Vich__UploaderBundle__Entity__File__CLASSMETADATA__' => 10,
+'App__Entity__Projekte__CLASSMETADATA__' => 7,
+'App__Entity__Skills__CLASSMETADATA__' => 8,
+'App__Entity__Social__CLASSMETADATA__' => 9,
+'App__Entity__Texte__CLASSMETADATA__' => 10,
+'Vich__UploaderBundle__Entity__File__CLASSMETADATA__' => 11,
 
 ], [
 
@@ -946,6 +947,134 @@ return [[
         [
             'stdClass' => [
                 'name' => [
+                    'App\\Entity\\Projekte',
+                ],
+                'namespace' => [
+                    'App\\Entity',
+                ],
+                'rootEntityName' => [
+                    'App\\Entity\\Projekte',
+                ],
+                'customRepositoryClassName' => [
+                    'App\\Repository\\ProjekteRepository',
+                ],
+                'identifier' => [
+                    [
+                        'id',
+                    ],
+                ],
+                'generatorType' => [
+                    4,
+                ],
+                'fieldMappings' => [
+                    [
+                        'id' => [
+                            'fieldName' => 'id',
+                            'type' => 'integer',
+                            'scale' => null,
+                            'length' => null,
+                            'unique' => false,
+                            'nullable' => false,
+                            'precision' => null,
+                            'id' => true,
+                            'columnName' => 'id',
+                        ],
+                        'name' => [
+                            'fieldName' => 'name',
+                            'type' => 'string',
+                            'scale' => null,
+                            'length' => 255,
+                            'unique' => false,
+                            'nullable' => false,
+                            'precision' => null,
+                            'columnName' => 'name',
+                        ],
+                        'beschreibung' => [
+                            'fieldName' => 'beschreibung',
+                            'type' => 'text',
+                            'scale' => null,
+                            'length' => null,
+                            'unique' => false,
+                            'nullable' => false,
+                            'precision' => null,
+                            'columnName' => 'beschreibung',
+                        ],
+                        'link' => [
+                            'fieldName' => 'link',
+                            'type' => 'string',
+                            'scale' => null,
+                            'length' => 255,
+                            'unique' => false,
+                            'nullable' => true,
+                            'precision' => null,
+                            'columnName' => 'link',
+                        ],
+                        'image' => [
+                            'fieldName' => 'image',
+                            'type' => 'string',
+                            'scale' => null,
+                            'length' => 255,
+                            'unique' => false,
+                            'nullable' => true,
+                            'precision' => null,
+                            'columnName' => 'image',
+                        ],
+                        'enable' => [
+                            'fieldName' => 'enable',
+                            'type' => 'boolean',
+                            'scale' => null,
+                            'length' => null,
+                            'unique' => false,
+                            'nullable' => false,
+                            'precision' => null,
+                            'columnName' => 'enable',
+                        ],
+                    ],
+                ],
+                'fieldNames' => [
+                    [
+                        'id' => 'id',
+                        'name' => 'name',
+                        'beschreibung' => 'beschreibung',
+                        'link' => 'link',
+                        'image' => 'image',
+                        'enable' => 'enable',
+                    ],
+                ],
+                'columnNames' => [
+                    [
+                        'id' => 'id',
+                        'name' => 'name',
+                        'beschreibung' => 'beschreibung',
+                        'link' => 'link',
+                        'image' => 'image',
+                        'enable' => 'enable',
+                    ],
+                ],
+                'table' => [
+                    [
+                        'name' => 'projekte',
+                    ],
+                ],
+                'idGenerator' => [
+                    $o[1],
+                ],
+            ],
+        ],
+        $o[0],
+        []
+    );
+},
+8 => static function () {
+    return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+        $o = [
+            clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Mapping\\ClassMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\ClassMetadata')),
+            clone ($p['Doctrine\\ORM\\Id\\IdentityGenerator'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Id\\IdentityGenerator')),
+        ],
+        null,
+        [
+            'stdClass' => [
+                'name' => [
                     'App\\Entity\\Skills',
                 ],
                 'namespace' => [
@@ -1052,7 +1181,7 @@ return [[
         []
     );
 },
-8 => static function () {
+9 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
             clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Mapping\\ClassMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\ClassMetadata')),
@@ -1156,7 +1285,7 @@ return [[
         []
     );
 },
-9 => static function () {
+10 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
             clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Mapping\\ClassMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\ClassMetadata')),
@@ -1248,7 +1377,7 @@ return [[
         []
     );
 },
-10 => static function () {
+11 => static function () {
     return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
         $o = [
             clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Mapping\\ClassMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Mapping\\ClassMetadata')),

@@ -7,9 +7,8 @@ require_once __DIR__.\DIRECTORY_SEPARATOR.'AwsS3V3'.\DIRECTORY_SEPARATOR.'Option
 use Symfony\Component\Config\Loader\ParamConfigurator;
 use Symfony\Component\Config\Definition\Exception\InvalidConfigurationException;
 
-
 /**
- * This class is automatically generated to help creating config.
+ * This class is automatically generated to help in creating a config.
  */
 class AwsS3V3Config 
 {
@@ -23,7 +22,8 @@ class AwsS3V3Config
     private $endpoint;
     private $usePathStyleEndpoint;
     private $options;
-    
+    private $_usedProperties = [];
+
     /**
      * @default false
      * @param ParamConfigurator|bool $value
@@ -31,77 +31,84 @@ class AwsS3V3Config
      */
     public function enabled($value): self
     {
+        $this->_usedProperties['enabled'] = true;
         $this->enabled = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @param ParamConfigurator|mixed $value
      * @return $this
      */
     public function key($value): self
     {
+        $this->_usedProperties['key'] = true;
         $this->key = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @param ParamConfigurator|mixed $value
      * @return $this
      */
     public function secret($value): self
     {
+        $this->_usedProperties['secret'] = true;
         $this->secret = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @param ParamConfigurator|mixed $value
      * @return $this
      */
     public function region($value): self
     {
+        $this->_usedProperties['region'] = true;
         $this->region = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @param ParamConfigurator|mixed $value
      * @return $this
      */
     public function version($value): self
     {
+        $this->_usedProperties['version'] = true;
         $this->version = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @param ParamConfigurator|mixed $value
      * @return $this
      */
     public function bucketName($value): self
     {
+        $this->_usedProperties['bucketName'] = true;
         $this->bucketName = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @param ParamConfigurator|mixed $value
      * @return $this
      */
     public function optionalPrefix($value): self
     {
+        $this->_usedProperties['optionalPrefix'] = true;
         $this->optionalPrefix = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default null
      * @param ParamConfigurator|mixed $value
@@ -109,11 +116,12 @@ class AwsS3V3Config
      */
     public function endpoint($value): self
     {
+        $this->_usedProperties['endpoint'] = true;
         $this->endpoint = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default false
      * @param ParamConfigurator|bool $value
@@ -121,114 +129,135 @@ class AwsS3V3Config
      */
     public function usePathStyleEndpoint($value): self
     {
+        $this->_usedProperties['usePathStyleEndpoint'] = true;
         $this->usePathStyleEndpoint = $value;
-    
+
         return $this;
     }
-    
-    public function options(array $value = []): \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\Flysystem\Options\AwsS3V3\OptionsConfig
+
+    /**
+     * @return \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\Flysystem\Options\AwsS3V3\OptionsConfig|$this
+     */
+    public function options($value = [])
     {
-        if (null === $this->options) {
+        if (!\is_array($value)) {
+            $this->_usedProperties['options'] = true;
+            $this->options = $value;
+
+            return $this;
+        }
+
+        if (!$this->options instanceof \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\Flysystem\Options\AwsS3V3\OptionsConfig) {
+            $this->_usedProperties['options'] = true;
             $this->options = new \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\Flysystem\Options\AwsS3V3\OptionsConfig($value);
-        } elseif ([] !== $value) {
+        } elseif (0 < \func_num_args()) {
             throw new InvalidConfigurationException('The node created by "options()" has already been initialized. You cannot pass values the second time you call options().');
         }
-    
+
         return $this->options;
     }
-    
+
     public function __construct(array $value = [])
     {
-    
-        if (isset($value['enabled'])) {
+        if (array_key_exists('enabled', $value)) {
+            $this->_usedProperties['enabled'] = true;
             $this->enabled = $value['enabled'];
             unset($value['enabled']);
         }
-    
-        if (isset($value['key'])) {
+
+        if (array_key_exists('key', $value)) {
+            $this->_usedProperties['key'] = true;
             $this->key = $value['key'];
             unset($value['key']);
         }
-    
-        if (isset($value['secret'])) {
+
+        if (array_key_exists('secret', $value)) {
+            $this->_usedProperties['secret'] = true;
             $this->secret = $value['secret'];
             unset($value['secret']);
         }
-    
-        if (isset($value['region'])) {
+
+        if (array_key_exists('region', $value)) {
+            $this->_usedProperties['region'] = true;
             $this->region = $value['region'];
             unset($value['region']);
         }
-    
-        if (isset($value['version'])) {
+
+        if (array_key_exists('version', $value)) {
+            $this->_usedProperties['version'] = true;
             $this->version = $value['version'];
             unset($value['version']);
         }
-    
-        if (isset($value['bucket_name'])) {
+
+        if (array_key_exists('bucket_name', $value)) {
+            $this->_usedProperties['bucketName'] = true;
             $this->bucketName = $value['bucket_name'];
             unset($value['bucket_name']);
         }
-    
-        if (isset($value['optional_prefix'])) {
+
+        if (array_key_exists('optional_prefix', $value)) {
+            $this->_usedProperties['optionalPrefix'] = true;
             $this->optionalPrefix = $value['optional_prefix'];
             unset($value['optional_prefix']);
         }
-    
-        if (isset($value['endpoint'])) {
+
+        if (array_key_exists('endpoint', $value)) {
+            $this->_usedProperties['endpoint'] = true;
             $this->endpoint = $value['endpoint'];
             unset($value['endpoint']);
         }
-    
-        if (isset($value['use_path_style_endpoint'])) {
+
+        if (array_key_exists('use_path_style_endpoint', $value)) {
+            $this->_usedProperties['usePathStyleEndpoint'] = true;
             $this->usePathStyleEndpoint = $value['use_path_style_endpoint'];
             unset($value['use_path_style_endpoint']);
         }
-    
-        if (isset($value['options'])) {
-            $this->options = new \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\Flysystem\Options\AwsS3V3\OptionsConfig($value['options']);
+
+        if (array_key_exists('options', $value)) {
+            $this->_usedProperties['options'] = true;
+            $this->options = \is_array($value['options']) ? new \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\Flysystem\Options\AwsS3V3\OptionsConfig($value['options']) : $value['options'];
             unset($value['options']);
         }
-    
+
         if ([] !== $value) {
             throw new InvalidConfigurationException(sprintf('The following keys are not supported by "%s": ', __CLASS__).implode(', ', array_keys($value)));
         }
     }
-    
+
     public function toArray(): array
     {
         $output = [];
-        if (null !== $this->enabled) {
+        if (isset($this->_usedProperties['enabled'])) {
             $output['enabled'] = $this->enabled;
         }
-        if (null !== $this->key) {
+        if (isset($this->_usedProperties['key'])) {
             $output['key'] = $this->key;
         }
-        if (null !== $this->secret) {
+        if (isset($this->_usedProperties['secret'])) {
             $output['secret'] = $this->secret;
         }
-        if (null !== $this->region) {
+        if (isset($this->_usedProperties['region'])) {
             $output['region'] = $this->region;
         }
-        if (null !== $this->version) {
+        if (isset($this->_usedProperties['version'])) {
             $output['version'] = $this->version;
         }
-        if (null !== $this->bucketName) {
+        if (isset($this->_usedProperties['bucketName'])) {
             $output['bucket_name'] = $this->bucketName;
         }
-        if (null !== $this->optionalPrefix) {
+        if (isset($this->_usedProperties['optionalPrefix'])) {
             $output['optional_prefix'] = $this->optionalPrefix;
         }
-        if (null !== $this->endpoint) {
+        if (isset($this->_usedProperties['endpoint'])) {
             $output['endpoint'] = $this->endpoint;
         }
-        if (null !== $this->usePathStyleEndpoint) {
+        if (isset($this->_usedProperties['usePathStyleEndpoint'])) {
             $output['use_path_style_endpoint'] = $this->usePathStyleEndpoint;
         }
-        if (null !== $this->options) {
-            $output['options'] = $this->options->toArray();
+        if (isset($this->_usedProperties['options'])) {
+            $output['options'] = $this->options instanceof \Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig\Flysystem\Options\AwsS3V3\OptionsConfig ? $this->options->toArray() : $this->options;
         }
-    
+
         return $output;
     }
 

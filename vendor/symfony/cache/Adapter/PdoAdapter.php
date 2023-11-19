@@ -34,8 +34,8 @@ class PdoAdapter extends AbstractAdapter implements PruneableInterface
     private $dataCol = 'item_data';
     private $lifetimeCol = 'item_lifetime';
     private $timeCol = 'item_time';
-    private $username = '';
-    private $password = '';
+    private $username = null;
+    private $password = null;
     private $connectionOptions = [];
     private $namespace;
 
@@ -557,6 +557,22 @@ class PdoAdapter extends AbstractAdapter implements PruneableInterface
         }
 
         return $failed;
+    }
+
+    /**
+     * @internal
+     */
+    protected function getId($key)
+    {
+        if ('pgsql' !== $this->driver ?? ($this->getConnection() ? $this->driver : null)) {
+            return parent::getId($key);
+        }
+
+        if (str_contains($key, "\0") || str_contains($key, '%') || !preg_match('//u', $key)) {
+            $key = rawurlencode($key);
+        }
+
+        return parent::getId($key);
     }
 
     private function getConnection(): \PDO

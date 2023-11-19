@@ -11,9 +11,8 @@ require_once __DIR__.\DIRECTORY_SEPARATOR.'FosCkEditor'.\DIRECTORY_SEPARATOR.'To
 use Symfony\Component\Config\Loader\ParamConfigurator;
 use Symfony\Component\Config\Definition\Exception\InvalidConfigurationException;
 
-
 /**
- * This class is automatically generated to help creating config.
+ * This class is automatically generated to help in creating a config.
  */
 class FosCkEditorConfig implements \Symfony\Component\Config\Builder\ConfigBuilderInterface
 {
@@ -35,7 +34,8 @@ class FosCkEditorConfig implements \Symfony\Component\Config\Builder\ConfigBuild
     private $templates;
     private $filebrowsers;
     private $toolbars;
-    
+    private $_usedProperties = [];
+
     /**
      * @default true
      * @param ParamConfigurator|bool $value
@@ -43,11 +43,12 @@ class FosCkEditorConfig implements \Symfony\Component\Config\Builder\ConfigBuild
      */
     public function enable($value): self
     {
+        $this->_usedProperties['enable'] = true;
         $this->enable = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default false
      * @param ParamConfigurator|bool $value
@@ -55,11 +56,12 @@ class FosCkEditorConfig implements \Symfony\Component\Config\Builder\ConfigBuild
      */
     public function async($value): self
     {
+        $this->_usedProperties['async'] = true;
         $this->async = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default true
      * @param ParamConfigurator|bool $value
@@ -67,11 +69,12 @@ class FosCkEditorConfig implements \Symfony\Component\Config\Builder\ConfigBuild
      */
     public function autoInline($value): self
     {
+        $this->_usedProperties['autoInline'] = true;
         $this->autoInline = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default false
      * @param ParamConfigurator|bool $value
@@ -79,11 +82,12 @@ class FosCkEditorConfig implements \Symfony\Component\Config\Builder\ConfigBuild
      */
     public function inline($value): self
     {
+        $this->_usedProperties['inline'] = true;
         $this->inline = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default true
      * @param ParamConfigurator|bool $value
@@ -91,11 +95,12 @@ class FosCkEditorConfig implements \Symfony\Component\Config\Builder\ConfigBuild
      */
     public function autoload($value): self
     {
+        $this->_usedProperties['autoload'] = true;
         $this->autoload = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default false
      * @param ParamConfigurator|bool $value
@@ -103,11 +108,12 @@ class FosCkEditorConfig implements \Symfony\Component\Config\Builder\ConfigBuild
      */
     public function jquery($value): self
     {
+        $this->_usedProperties['jquery'] = true;
         $this->jquery = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default false
      * @param ParamConfigurator|bool $value
@@ -115,11 +121,12 @@ class FosCkEditorConfig implements \Symfony\Component\Config\Builder\ConfigBuild
      */
     public function requireJs($value): self
     {
+        $this->_usedProperties['requireJs'] = true;
         $this->requireJs = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default false
      * @param ParamConfigurator|bool $value
@@ -127,11 +134,12 @@ class FosCkEditorConfig implements \Symfony\Component\Config\Builder\ConfigBuild
      */
     public function inputSync($value): self
     {
+        $this->_usedProperties['inputSync'] = true;
         $this->inputSync = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default 'bundles/fosckeditor/'
      * @param ParamConfigurator|mixed $value
@@ -139,11 +147,12 @@ class FosCkEditorConfig implements \Symfony\Component\Config\Builder\ConfigBuild
      */
     public function basePath($value): self
     {
+        $this->_usedProperties['basePath'] = true;
         $this->basePath = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default 'bundles/fosckeditor/ckeditor.js'
      * @param ParamConfigurator|mixed $value
@@ -151,11 +160,12 @@ class FosCkEditorConfig implements \Symfony\Component\Config\Builder\ConfigBuild
      */
     public function jsPath($value): self
     {
+        $this->_usedProperties['jsPath'] = true;
         $this->jsPath = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default 'bundles/fosckeditor/adapters/jquery.js'
      * @param ParamConfigurator|mixed $value
@@ -163,11 +173,12 @@ class FosCkEditorConfig implements \Symfony\Component\Config\Builder\ConfigBuild
      */
     public function jqueryPath($value): self
     {
+        $this->_usedProperties['jqueryPath'] = true;
         $this->jqueryPath = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default null
      * @param ParamConfigurator|mixed $value
@@ -175,242 +186,262 @@ class FosCkEditorConfig implements \Symfony\Component\Config\Builder\ConfigBuild
      */
     public function defaultConfig($value): self
     {
+        $this->_usedProperties['defaultConfig'] = true;
         $this->defaultConfig = $value;
-    
+
         return $this;
     }
-    
+
     public function configs(string $name, array $value = []): \Symfony\Config\FosCkEditor\ConfigsConfig
     {
         if (!isset($this->configs[$name])) {
-            return $this->configs[$name] = new \Symfony\Config\FosCkEditor\ConfigsConfig($value);
+            $this->_usedProperties['configs'] = true;
+            $this->configs[$name] = new \Symfony\Config\FosCkEditor\ConfigsConfig($value);
+        } elseif (1 < \func_num_args()) {
+            throw new InvalidConfigurationException('The node created by "configs()" has already been initialized. You cannot pass values the second time you call configs().');
         }
-        if ([] === $value) {
-            return $this->configs[$name];
-        }
-    
-        throw new InvalidConfigurationException('The node created by "configs()" has already been initialized. You cannot pass values the second time you call configs().');
+
+        return $this->configs[$name];
     }
-    
+
     public function plugins(string $name, array $value = []): \Symfony\Config\FosCkEditor\PluginsConfig
     {
         if (!isset($this->plugins[$name])) {
-            return $this->plugins[$name] = new \Symfony\Config\FosCkEditor\PluginsConfig($value);
+            $this->_usedProperties['plugins'] = true;
+            $this->plugins[$name] = new \Symfony\Config\FosCkEditor\PluginsConfig($value);
+        } elseif (1 < \func_num_args()) {
+            throw new InvalidConfigurationException('The node created by "plugins()" has already been initialized. You cannot pass values the second time you call plugins().');
         }
-        if ([] === $value) {
-            return $this->plugins[$name];
-        }
-    
-        throw new InvalidConfigurationException('The node created by "plugins()" has already been initialized. You cannot pass values the second time you call plugins().');
+
+        return $this->plugins[$name];
     }
-    
+
     public function styles(string $name, array $value = []): \Symfony\Config\FosCkEditor\StylesConfig
     {
         if (!isset($this->styles[$name])) {
-            return $this->styles[$name] = new \Symfony\Config\FosCkEditor\StylesConfig($value);
+            $this->_usedProperties['styles'] = true;
+            $this->styles[$name] = new \Symfony\Config\FosCkEditor\StylesConfig($value);
+        } elseif (1 < \func_num_args()) {
+            throw new InvalidConfigurationException('The node created by "styles()" has already been initialized. You cannot pass values the second time you call styles().');
         }
-        if ([] === $value) {
-            return $this->styles[$name];
-        }
-    
-        throw new InvalidConfigurationException('The node created by "styles()" has already been initialized. You cannot pass values the second time you call styles().');
+
+        return $this->styles[$name];
     }
-    
+
     public function templates(string $name, array $value = []): \Symfony\Config\FosCkEditor\TemplatesConfig
     {
         if (!isset($this->templates[$name])) {
-            return $this->templates[$name] = new \Symfony\Config\FosCkEditor\TemplatesConfig($value);
+            $this->_usedProperties['templates'] = true;
+            $this->templates[$name] = new \Symfony\Config\FosCkEditor\TemplatesConfig($value);
+        } elseif (1 < \func_num_args()) {
+            throw new InvalidConfigurationException('The node created by "templates()" has already been initialized. You cannot pass values the second time you call templates().');
         }
-        if ([] === $value) {
-            return $this->templates[$name];
-        }
-    
-        throw new InvalidConfigurationException('The node created by "templates()" has already been initialized. You cannot pass values the second time you call templates().');
+
+        return $this->templates[$name];
     }
-    
+
     /**
      * @param ParamConfigurator|mixed $value
      * @return $this
      */
     public function filebrowsers(string $name, $value): self
     {
+        $this->_usedProperties['filebrowsers'] = true;
         $this->filebrowsers[$name] = $value;
-    
+
         return $this;
     }
-    
+
     public function toolbars(array $value = []): \Symfony\Config\FosCkEditor\ToolbarsConfig
     {
         if (null === $this->toolbars) {
+            $this->_usedProperties['toolbars'] = true;
             $this->toolbars = new \Symfony\Config\FosCkEditor\ToolbarsConfig($value);
-        } elseif ([] !== $value) {
+        } elseif (0 < \func_num_args()) {
             throw new InvalidConfigurationException('The node created by "toolbars()" has already been initialized. You cannot pass values the second time you call toolbars().');
         }
-    
+
         return $this->toolbars;
     }
-    
+
     public function getExtensionAlias(): string
     {
         return 'fos_ck_editor';
     }
-    
+
     public function __construct(array $value = [])
     {
-    
-        if (isset($value['enable'])) {
+        if (array_key_exists('enable', $value)) {
+            $this->_usedProperties['enable'] = true;
             $this->enable = $value['enable'];
             unset($value['enable']);
         }
-    
-        if (isset($value['async'])) {
+
+        if (array_key_exists('async', $value)) {
+            $this->_usedProperties['async'] = true;
             $this->async = $value['async'];
             unset($value['async']);
         }
-    
-        if (isset($value['auto_inline'])) {
+
+        if (array_key_exists('auto_inline', $value)) {
+            $this->_usedProperties['autoInline'] = true;
             $this->autoInline = $value['auto_inline'];
             unset($value['auto_inline']);
         }
-    
-        if (isset($value['inline'])) {
+
+        if (array_key_exists('inline', $value)) {
+            $this->_usedProperties['inline'] = true;
             $this->inline = $value['inline'];
             unset($value['inline']);
         }
-    
-        if (isset($value['autoload'])) {
+
+        if (array_key_exists('autoload', $value)) {
+            $this->_usedProperties['autoload'] = true;
             $this->autoload = $value['autoload'];
             unset($value['autoload']);
         }
-    
-        if (isset($value['jquery'])) {
+
+        if (array_key_exists('jquery', $value)) {
+            $this->_usedProperties['jquery'] = true;
             $this->jquery = $value['jquery'];
             unset($value['jquery']);
         }
-    
-        if (isset($value['require_js'])) {
+
+        if (array_key_exists('require_js', $value)) {
+            $this->_usedProperties['requireJs'] = true;
             $this->requireJs = $value['require_js'];
             unset($value['require_js']);
         }
-    
-        if (isset($value['input_sync'])) {
+
+        if (array_key_exists('input_sync', $value)) {
+            $this->_usedProperties['inputSync'] = true;
             $this->inputSync = $value['input_sync'];
             unset($value['input_sync']);
         }
-    
-        if (isset($value['base_path'])) {
+
+        if (array_key_exists('base_path', $value)) {
+            $this->_usedProperties['basePath'] = true;
             $this->basePath = $value['base_path'];
             unset($value['base_path']);
         }
-    
-        if (isset($value['js_path'])) {
+
+        if (array_key_exists('js_path', $value)) {
+            $this->_usedProperties['jsPath'] = true;
             $this->jsPath = $value['js_path'];
             unset($value['js_path']);
         }
-    
-        if (isset($value['jquery_path'])) {
+
+        if (array_key_exists('jquery_path', $value)) {
+            $this->_usedProperties['jqueryPath'] = true;
             $this->jqueryPath = $value['jquery_path'];
             unset($value['jquery_path']);
         }
-    
-        if (isset($value['default_config'])) {
+
+        if (array_key_exists('default_config', $value)) {
+            $this->_usedProperties['defaultConfig'] = true;
             $this->defaultConfig = $value['default_config'];
             unset($value['default_config']);
         }
-    
-        if (isset($value['configs'])) {
+
+        if (array_key_exists('configs', $value)) {
+            $this->_usedProperties['configs'] = true;
             $this->configs = array_map(function ($v) { return new \Symfony\Config\FosCkEditor\ConfigsConfig($v); }, $value['configs']);
             unset($value['configs']);
         }
-    
-        if (isset($value['plugins'])) {
+
+        if (array_key_exists('plugins', $value)) {
+            $this->_usedProperties['plugins'] = true;
             $this->plugins = array_map(function ($v) { return new \Symfony\Config\FosCkEditor\PluginsConfig($v); }, $value['plugins']);
             unset($value['plugins']);
         }
-    
-        if (isset($value['styles'])) {
+
+        if (array_key_exists('styles', $value)) {
+            $this->_usedProperties['styles'] = true;
             $this->styles = array_map(function ($v) { return new \Symfony\Config\FosCkEditor\StylesConfig($v); }, $value['styles']);
             unset($value['styles']);
         }
-    
-        if (isset($value['templates'])) {
+
+        if (array_key_exists('templates', $value)) {
+            $this->_usedProperties['templates'] = true;
             $this->templates = array_map(function ($v) { return new \Symfony\Config\FosCkEditor\TemplatesConfig($v); }, $value['templates']);
             unset($value['templates']);
         }
-    
-        if (isset($value['filebrowsers'])) {
+
+        if (array_key_exists('filebrowsers', $value)) {
+            $this->_usedProperties['filebrowsers'] = true;
             $this->filebrowsers = $value['filebrowsers'];
             unset($value['filebrowsers']);
         }
-    
-        if (isset($value['toolbars'])) {
+
+        if (array_key_exists('toolbars', $value)) {
+            $this->_usedProperties['toolbars'] = true;
             $this->toolbars = new \Symfony\Config\FosCkEditor\ToolbarsConfig($value['toolbars']);
             unset($value['toolbars']);
         }
-    
+
         if ([] !== $value) {
             throw new InvalidConfigurationException(sprintf('The following keys are not supported by "%s": ', __CLASS__).implode(', ', array_keys($value)));
         }
     }
-    
+
     public function toArray(): array
     {
         $output = [];
-        if (null !== $this->enable) {
+        if (isset($this->_usedProperties['enable'])) {
             $output['enable'] = $this->enable;
         }
-        if (null !== $this->async) {
+        if (isset($this->_usedProperties['async'])) {
             $output['async'] = $this->async;
         }
-        if (null !== $this->autoInline) {
+        if (isset($this->_usedProperties['autoInline'])) {
             $output['auto_inline'] = $this->autoInline;
         }
-        if (null !== $this->inline) {
+        if (isset($this->_usedProperties['inline'])) {
             $output['inline'] = $this->inline;
         }
-        if (null !== $this->autoload) {
+        if (isset($this->_usedProperties['autoload'])) {
             $output['autoload'] = $this->autoload;
         }
-        if (null !== $this->jquery) {
+        if (isset($this->_usedProperties['jquery'])) {
             $output['jquery'] = $this->jquery;
         }
-        if (null !== $this->requireJs) {
+        if (isset($this->_usedProperties['requireJs'])) {
             $output['require_js'] = $this->requireJs;
         }
-        if (null !== $this->inputSync) {
+        if (isset($this->_usedProperties['inputSync'])) {
             $output['input_sync'] = $this->inputSync;
         }
-        if (null !== $this->basePath) {
+        if (isset($this->_usedProperties['basePath'])) {
             $output['base_path'] = $this->basePath;
         }
-        if (null !== $this->jsPath) {
+        if (isset($this->_usedProperties['jsPath'])) {
             $output['js_path'] = $this->jsPath;
         }
-        if (null !== $this->jqueryPath) {
+        if (isset($this->_usedProperties['jqueryPath'])) {
             $output['jquery_path'] = $this->jqueryPath;
         }
-        if (null !== $this->defaultConfig) {
+        if (isset($this->_usedProperties['defaultConfig'])) {
             $output['default_config'] = $this->defaultConfig;
         }
-        if (null !== $this->configs) {
+        if (isset($this->_usedProperties['configs'])) {
             $output['configs'] = array_map(function ($v) { return $v->toArray(); }, $this->configs);
         }
-        if (null !== $this->plugins) {
+        if (isset($this->_usedProperties['plugins'])) {
             $output['plugins'] = array_map(function ($v) { return $v->toArray(); }, $this->plugins);
         }
-        if (null !== $this->styles) {
+        if (isset($this->_usedProperties['styles'])) {
             $output['styles'] = array_map(function ($v) { return $v->toArray(); }, $this->styles);
         }
-        if (null !== $this->templates) {
+        if (isset($this->_usedProperties['templates'])) {
             $output['templates'] = array_map(function ($v) { return $v->toArray(); }, $this->templates);
         }
-        if (null !== $this->filebrowsers) {
+        if (isset($this->_usedProperties['filebrowsers'])) {
             $output['filebrowsers'] = $this->filebrowsers;
         }
-        if (null !== $this->toolbars) {
+        if (isset($this->_usedProperties['toolbars'])) {
             $output['toolbars'] = $this->toolbars->toArray();
         }
-    
+
         return $output;
     }
 

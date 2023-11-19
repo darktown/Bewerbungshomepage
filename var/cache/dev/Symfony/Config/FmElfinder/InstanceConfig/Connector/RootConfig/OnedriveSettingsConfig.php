@@ -2,13 +2,11 @@
 
 namespace Symfony\Config\FmElfinder\InstanceConfig\Connector\RootConfig;
 
-
 use Symfony\Component\Config\Loader\ParamConfigurator;
 use Symfony\Component\Config\Definition\Exception\InvalidConfigurationException;
 
-
 /**
- * This class is automatically generated to help creating config.
+ * This class is automatically generated to help in creating a config.
  */
 class OnedriveSettingsConfig 
 {
@@ -26,7 +24,8 @@ class OnedriveSettingsConfig
     private $acceptedName;
     private $rootCssClass;
     private $useApiThumbnail;
-    
+    private $_usedProperties = [];
+
     /**
      * @default false
      * @param ParamConfigurator|bool $value
@@ -34,11 +33,12 @@ class OnedriveSettingsConfig
      */
     public function enabled($value): self
     {
+        $this->_usedProperties['enabled'] = true;
         $this->enabled = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default null
      * @param ParamConfigurator|mixed $value
@@ -46,11 +46,12 @@ class OnedriveSettingsConfig
      */
     public function clientId($value): self
     {
+        $this->_usedProperties['clientId'] = true;
         $this->clientId = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default null
      * @param ParamConfigurator|mixed $value
@@ -58,11 +59,12 @@ class OnedriveSettingsConfig
      */
     public function clientSecret($value): self
     {
+        $this->_usedProperties['clientSecret'] = true;
         $this->clientSecret = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default null
      * @param ParamConfigurator|mixed $value
@@ -70,11 +72,12 @@ class OnedriveSettingsConfig
      */
     public function accessToken($value): self
     {
+        $this->_usedProperties['accessToken'] = true;
         $this->accessToken = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default 'OneDrive.com'
      * @param ParamConfigurator|mixed $value
@@ -82,22 +85,24 @@ class OnedriveSettingsConfig
      */
     public function root($value): self
     {
+        $this->_usedProperties['root'] = true;
         $this->root = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @param ParamConfigurator|mixed $value
      * @return $this
      */
     public function oneDriveApiClient($value): self
     {
+        $this->_usedProperties['oneDriveApiClient'] = true;
         $this->oneDriveApiClient = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default '/'
      * @param ParamConfigurator|mixed $value
@@ -105,11 +110,12 @@ class OnedriveSettingsConfig
      */
     public function path($value): self
     {
+        $this->_usedProperties['path'] = true;
         $this->path = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default '/'
      * @param ParamConfigurator|mixed $value
@@ -117,44 +123,48 @@ class OnedriveSettingsConfig
      */
     public function separator($value): self
     {
+        $this->_usedProperties['separator'] = true;
         $this->separator = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @param ParamConfigurator|mixed $value
      * @return $this
      */
     public function tmbPath($value): self
     {
+        $this->_usedProperties['tmbPath'] = true;
         $this->tmbPath = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @param ParamConfigurator|mixed $value
      * @return $this
      */
     public function tmbURL($value): self
     {
+        $this->_usedProperties['tmbURL'] = true;
         $this->tmbURL = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @param ParamConfigurator|mixed $value
      * @return $this
      */
     public function tmpPath($value): self
     {
+        $this->_usedProperties['tmpPath'] = true;
         $this->tmpPath = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default '#^[^/\\?*:|"<>]*[^./\\?*:|"<>]$#'
      * @param ParamConfigurator|mixed $value
@@ -162,11 +172,12 @@ class OnedriveSettingsConfig
      */
     public function acceptedName($value): self
     {
+        $this->_usedProperties['acceptedName'] = true;
         $this->acceptedName = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default 'elfinder-navbar-root-onedrive'
      * @param ParamConfigurator|mixed $value
@@ -174,11 +185,12 @@ class OnedriveSettingsConfig
      */
     public function rootCssClass($value): self
     {
+        $this->_usedProperties['rootCssClass'] = true;
         $this->rootCssClass = $value;
-    
+
         return $this;
     }
-    
+
     /**
      * @default true
      * @param ParamConfigurator|bool $value
@@ -186,135 +198,149 @@ class OnedriveSettingsConfig
      */
     public function useApiThumbnail($value): self
     {
+        $this->_usedProperties['useApiThumbnail'] = true;
         $this->useApiThumbnail = $value;
-    
+
         return $this;
     }
-    
+
     public function __construct(array $value = [])
     {
-    
-        if (isset($value['enabled'])) {
+        if (array_key_exists('enabled', $value)) {
+            $this->_usedProperties['enabled'] = true;
             $this->enabled = $value['enabled'];
             unset($value['enabled']);
         }
-    
-        if (isset($value['client_id'])) {
+
+        if (array_key_exists('client_id', $value)) {
+            $this->_usedProperties['clientId'] = true;
             $this->clientId = $value['client_id'];
             unset($value['client_id']);
         }
-    
-        if (isset($value['client_secret'])) {
+
+        if (array_key_exists('client_secret', $value)) {
+            $this->_usedProperties['clientSecret'] = true;
             $this->clientSecret = $value['client_secret'];
             unset($value['client_secret']);
         }
-    
-        if (isset($value['accessToken'])) {
+
+        if (array_key_exists('accessToken', $value)) {
+            $this->_usedProperties['accessToken'] = true;
             $this->accessToken = $value['accessToken'];
             unset($value['accessToken']);
         }
-    
-        if (isset($value['root'])) {
+
+        if (array_key_exists('root', $value)) {
+            $this->_usedProperties['root'] = true;
             $this->root = $value['root'];
             unset($value['root']);
         }
-    
-        if (isset($value['OneDriveApiClient'])) {
+
+        if (array_key_exists('OneDriveApiClient', $value)) {
+            $this->_usedProperties['oneDriveApiClient'] = true;
             $this->oneDriveApiClient = $value['OneDriveApiClient'];
             unset($value['OneDriveApiClient']);
         }
-    
-        if (isset($value['path'])) {
+
+        if (array_key_exists('path', $value)) {
+            $this->_usedProperties['path'] = true;
             $this->path = $value['path'];
             unset($value['path']);
         }
-    
-        if (isset($value['separator'])) {
+
+        if (array_key_exists('separator', $value)) {
+            $this->_usedProperties['separator'] = true;
             $this->separator = $value['separator'];
             unset($value['separator']);
         }
-    
-        if (isset($value['tmbPath'])) {
+
+        if (array_key_exists('tmbPath', $value)) {
+            $this->_usedProperties['tmbPath'] = true;
             $this->tmbPath = $value['tmbPath'];
             unset($value['tmbPath']);
         }
-    
-        if (isset($value['tmbURL'])) {
+
+        if (array_key_exists('tmbURL', $value)) {
+            $this->_usedProperties['tmbURL'] = true;
             $this->tmbURL = $value['tmbURL'];
             unset($value['tmbURL']);
         }
-    
-        if (isset($value['tmpPath'])) {
+
+        if (array_key_exists('tmpPath', $value)) {
+            $this->_usedProperties['tmpPath'] = true;
             $this->tmpPath = $value['tmpPath'];
             unset($value['tmpPath']);
         }
-    
-        if (isset($value['acceptedName'])) {
+
+        if (array_key_exists('acceptedName', $value)) {
+            $this->_usedProperties['acceptedName'] = true;
             $this->acceptedName = $value['acceptedName'];
             unset($value['acceptedName']);
         }
-    
-        if (isset($value['rootCssClass'])) {
+
+        if (array_key_exists('rootCssClass', $value)) {
+            $this->_usedProperties['rootCssClass'] = true;
             $this->rootCssClass = $value['rootCssClass'];
             unset($value['rootCssClass']);
         }
-    
-        if (isset($value['useApiThumbnail'])) {
+
+        if (array_key_exists('useApiThumbnail', $value)) {
+            $this->_usedProperties['useApiThumbnail'] = true;
             $this->useApiThumbnail = $value['useApiThumbnail'];
             unset($value['useApiThumbnail']);
         }
-    
+
         if ([] !== $value) {
             throw new InvalidConfigurationException(sprintf('The following keys are not supported by "%s": ', __CLASS__).implode(', ', array_keys($value)));
         }
     }
-    
+
     public function toArray(): array
     {
         $output = [];
-        if (null !== $this->enabled) {
+        if (isset($this->_usedProperties['enabled'])) {
             $output['enabled'] = $this->enabled;
         }
-        if (null !== $this->clientId) {
+        if (isset($this->_usedProperties['clientId'])) {
             $output['client_id'] = $this->clientId;
         }
-        if (null !== $this->clientSecret) {
+        if (isset($this->_usedProperties['clientSecret'])) {
             $output['client_secret'] = $this->clientSecret;
         }
-        if (null !== $this->accessToken) {
+        if (isset($this->_usedProperties['accessToken'])) {
             $output['accessToken'] = $this->accessToken;
         }
-        if (null !== $this->root) {
+        if (isset($this->_usedProperties['root'])) {
             $output['root'] = $this->root;
         }
-        if (null !== $this->oneDriveApiClient) {
+        if (isset($this->_usedProperties['oneDriveApiClient'])) {
             $output['OneDriveApiClient'] = $this->oneDriveApiClient;
         }
-        if (null !== $this->path) {
+        if (isset($this->_usedProperties['path'])) {
             $output['path'] = $this->path;
         }
-        if (null !== $this->separator) {
+        if (isset($this->_usedProperties['separator'])) {
             $output['separator'] = $this->separator;
         }
-        if (null !== $this->tmbPath) {
+        if (isset($this->_usedProperties['tmbPath'])) {
             $output['tmbPath'] = $this->tmbPath;
         }
-        if (null !== $this->tmbURL) {
+        if (isset($this->_usedProperties['tmbURL'])) {
             $output['tmbURL'] = $this->tmbURL;
         }
-        if (null !== $this->tmpPath) {
+        if (isset($this->_usedProperties['tmpPath'])) {
             $output['tmpPath'] = $this->tmpPath;
         }
-        if (null !== $this->acceptedName) {
+        if (isset($this->_usedProperties['acceptedName'])) {
             $output['acceptedName'] = $this->acceptedName;
         }
-        if (null !== $this->rootCssClass) {
+        if (isset($this->_usedProperties['rootCssClass'])) {
             $output['rootCssClass'] = $this->rootCssClass;
         }
-        if (null !== $this->useApiThumbnail) {
+        if (isset($this->_usedProperties['useApiThumbnail'])) {
             $output['useApiThumbnail'] = $this->useApiThumbnail;
         }
-    
+
         return $output;
     }
 
